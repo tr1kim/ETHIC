@@ -3,6 +3,7 @@ package hitchbot.command;
 import java.util.ArrayList;
 
 import hitchbot.commands.Bind;
+import hitchbot.commands.Friend;
 import hitchbot.main.Hitchbot;
 
 public class CommandManager {
@@ -12,6 +13,7 @@ public class CommandManager {
 	public CommandManager() {
 		commands = new ArrayList();
 		addCommand(new Bind());
+		addCommand(new Friend());
 	}
 	
 	public void addCommand(Command c) {
@@ -29,11 +31,12 @@ public class CommandManager {
 		for (Command c: getCommands()) {
 			if (c.getAlias().equalsIgnoreCase(command)) {
 				try {
-					c.onCommand(args, args.split(" "));
+					c.onCommand(command, args.split(" "));
 				}catch(Exception e){
 					Hitchbot.addChatMessage("Invalid Command!");
 					Hitchbot.addChatMessage(c.getSyntax());
 				}
+				return;
 			}
 		}
 		Hitchbot.addChatMessage("Command not found!");

@@ -1,0 +1,30 @@
+[22:51:18] [Client thread/INFO]: Setting user: Player424
+[22:51:18] [Client thread/INFO]: (Session ID is token:0:Player424)
+[22:51:20] [Client thread/INFO]: LWJGL Version: 2.9.4
+[22:51:22] [Client thread/INFO]: Reloading ResourceManager: Default
+[22:51:22] [Client thread/ERROR]: Couldn't initialize twitch stream
+[22:51:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:51:22] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[22:51:22] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:51:22] [Thread-6/INFO]: OpenAL initialized.
+[22:51:22] [Sound Library Loader/INFO]: Sound engine started
+[22:51:24] [Client thread/INFO]: Created: 512x512 textures-atlas
+[22:51:58] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[22:51:58] [Server thread/INFO]: Generating keypair
+[22:51:58] [Server thread/INFO]: Preparing start region for level 0
+[22:51:59] [Server thread/INFO]: Changing view distance to 12, from 10
+[22:51:59] [Server thread/INFO]: Player424[local:E:36db1b12] logged in with entity id 133 at (570.7059447148403, 68.0, 183.8967318304002)
+[22:51:59] [Server thread/INFO]: Player424 joined the game
+[22:52:01] [Server thread/INFO]: Saving and pausing game...
+[22:52:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[22:52:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[22:52:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[22:52:03] [Client thread/INFO]: Using default channel type
+[22:52:03] [Client thread/INFO]: Started on 51879
+[22:52:03] [Client thread/INFO]: [CHAT] Local game hosted on port 51879
+[22:52:08] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
+[22:52:08] [Server thread/INFO]: Hitchens[/192.168.8.109:51902] logged in with entity id 206 at (591.0983308663884, 70.0, 134.21459440176014)
+[22:52:08] [Server thread/INFO]: Hitchens joined the game
+[22:52:08] [Client thread/INFO]: [CHAT] Hitchens joined the game
+[22:52:17] [Server thread/INFO]: Player424 has just earned the achievement [Taking Inventory]
+[22:52:17] [Client thread/INFO]: [CHAT] Player424 has just earned the achievement [Taking Inventory]

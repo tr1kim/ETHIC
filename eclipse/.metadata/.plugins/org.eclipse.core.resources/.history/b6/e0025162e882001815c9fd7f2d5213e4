@@ -1,0 +1,40 @@
+package hitchbot.commands;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.command.Command;
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
+
+public class Friend extends Command {
+
+	@Override
+	public String getAlias() {
+		return "friends";
+	}
+
+	@Override
+	public String getDescription() {
+		return "Handles the clients friendlist";
+	}
+
+	@Override
+	public String getSyntax() {
+		return "-friends add [name] | -friends del [name] | -friends list";
+	}
+
+	@Override
+	public void onCommand(String command, String[] args) throws Exception {
+		if (args[0].equalsIgnoreCase("add")) {
+			Hitchbot.addFriend(args[1]);
+		}else if(args[0].equalsIgnoreCase("del")) {
+			Hitchbot.removeFriend(args[1]);
+		}else if(args[0].equalsIgnoreCase("list")) {
+			ArrayList<String> f = Hitchbot.getFriends(n)
+			for (Module m: Hitchbot.getModules()) {
+				m.setKey(0);
+			}
+		}
+	}
+
+}
