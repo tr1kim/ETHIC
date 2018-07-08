@@ -202,7 +202,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             					double ySpeed = ent.posY - ent.lastTickPosY;
             					double posY = ent.posY;
             					if (ent.isAirBorne) {
-            						posY=posY + ySpeed  - 0.04*mult*mult;
+            						posY-=posY + ySpeed  - 0.04*mult*mult;
             					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;

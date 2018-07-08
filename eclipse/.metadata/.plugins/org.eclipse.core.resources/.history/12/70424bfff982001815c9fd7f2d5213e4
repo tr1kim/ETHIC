@@ -18,8 +18,9 @@ public class GuiIngameHook extends GuiIngame{
         ScaledResolution scaledresolution = new ScaledResolution(this.mc);
         this.mc.entityRenderer.setupOverlayRendering();
         GlStateManager.enableBlend();
-        mc.fontRendererObj.drawString("ETHIC v1.0 - Dev" , 2, 2+(0*10), 0xff0000);
-        int count = 1;
+        
+        int count = 0;
+        
         for (Module m: Hitchbot.getModules()) {
         	if(m.isToggled())
         	{
