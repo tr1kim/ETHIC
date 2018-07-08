@@ -1,0 +1,57 @@
+[15:12:07] [Client thread/INFO]: Setting user: Player282
+[15:12:07] [Client thread/INFO]: (Session ID is token:0:Player282)
+[15:12:08] [Client thread/INFO]: LWJGL Version: 2.9.4
+[15:12:10] [Client thread/INFO]: Reloading ResourceManager: Default
+[15:12:10] [Client thread/ERROR]: Couldn't initialize twitch stream
+[15:12:10] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[15:12:10] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[15:12:10] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[15:12:10] [Thread-6/INFO]: OpenAL initialized.
+[15:12:11] [Sound Library Loader/INFO]: Sound engine started
+[15:12:11] [Client thread/INFO]: Created: 512x512 textures-atlas
+[15:12:17] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[15:12:17] [Server thread/INFO]: Generating keypair
+[15:12:17] [Server thread/INFO]: Preparing start region for level 0
+[15:12:18] [Server thread/INFO]: Changing view distance to 12, from 10
+[15:12:18] [Server thread/INFO]: Player282[local:E:1659a63c] logged in with entity id 61 at (785.4991143576535, 68.0, 407.1665534148426)
+[15:12:18] [Server thread/INFO]: Player282 joined the game
+[15:12:33] [Server thread/INFO]: Player282 was slain by Spider
+[15:12:33] [Client thread/INFO]: [CHAT] Player282 was slain by Spider
+[15:12:39] [Server thread/INFO]: Player282 has just earned the achievement [Taking Inventory]
+[15:12:39] [Client thread/INFO]: [CHAT] Player282 has just earned the achievement [Taking Inventory]
+[15:12:41] [Server thread/INFO]: [Player282: Set own game mode to Creative Mode]
+[15:12:41] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[15:13:21] [Server thread/INFO]: [Player282: Set own game mode to Survival Mode]
+[15:13:21] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[15:14:11] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2238ms behind, skipping 44 tick(s)
+[15:14:30] [Server thread/INFO]: Saving and pausing game...
+[15:14:30] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[15:14:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[15:14:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[15:14:31] [Server thread/INFO]: Stopping server
+[15:14:31] [Server thread/INFO]: Saving players
+[15:14:31] [Server thread/INFO]: Saving worlds
+[15:14:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[15:14:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[15:14:31] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[15:15:36] [Client thread/INFO]: Stopping!
+[15:15:36] [Client thread/INFO]: SoundSystem shutting down...
+[15:15:36] [Client [15:15:37] [Client thread/INFO]: LWJGL Version: 2.9.4
+[15:15:38] [Client thread/INFO]: Reloading ResourceManager: Default
+[15:15:38] [Client thread/ERROR]: Couldn't initialize twitch stream
+[15:15:38] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[15:15:38] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[15:15:38] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[15:15:38] [Thread-5/INFO]: OpenAL initialized.
+[15:15:39] [Sound Library Loader/INFO]: Sound engine started
+[15:15:39] [Client thread/INFO]: Created: 512x512 textures-atlas
+[15:15:44] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[15:15:44] [Server thread/INFO]: Generating keypair
+[15:15:44] [Server thread/INFO]: Preparing start region for level 0
+[15:15:45] [Server thread/INFO]: Changing view distance to 12, from 10
+[15:15:45] [Server thread/INFO]: Player629[local:E:2cffdf45] logged in with entity id 30 at (19.108683696111612, 68.1707870772188, 427.9628721935641)
+[15:15:45] [Server thread/INFO]: Player629 joined the game
+[15:16:01] [Server thread/INFO]: [Player629: Set own game mode to Creative Mode]
+[15:16:01] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[15:16:07] [Server thread/INFO]: Player629 has just earned the achievement [Taking Inventory]
+[15:16:07] [Client thread/INFO]: [CHAT] Player629 has just earned the achievement [Taking Inventory]

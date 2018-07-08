@@ -1,0 +1,42 @@
+package hitchbot.mods;
+
+import java.awt.Robot;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+import net.minecraft.item.Item;
+
+public class AutoSteak extends Module {
+	
+	private static double timer = System.currentTimeMillis(); 
+	
+	public AutoSteak() {
+		super("AutoSteak",Keyboard.KEY_N, Category.COMBAT);
+	}
+	public void onRender() {
+		if (this.isToggled()) {
+			if (mc.thePlayer.getHealth() < 10) {
+				if (System.currentTimeMillis() - timer > 1000) {
+					for (int i = 0; i<9; i++) {
+						if (mc.thePlayer.inventory.getStackInSlot(i).getItem().equals(Item.getItemById(364))) {
+						    Robot r = new Robot();
+						    r.keyPress(157);
+						    r.keyPress(90);
+
+						    r.keyRelease(90);
+						    r.keyRelease(157);
+
+
+						  } catch (AWTException e) {
+						    e.printStackTrace();
+						  }
+						}
+					}
+				}
+			}
+		}
+		super.onUpdate();
+	}
+
+}

@@ -1,0 +1,25 @@
+15:14:45 - Json file not found in C:\Users\root\AppData\Roaming\.minecraft\versions\1.8.8\1.8.8.json
+15:14:45 - Please run launcher & Minecraft at least once.
+16:26:50 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+16:29:49 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+16:37:17 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+16:37:18 - !! Can not find client sources, try decompiling !!
+16:37:18 - !! Can not find server sources, try decompiling !!
+16:37:25 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+16:40:12 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+17:08:57 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+17:09:07 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+17:09:42 - FATAL ERROR
+Traceback (most recent call last):
+  File "runtime\decompile.py", line 129, in decompile
+    clientCopy.copyClientAssets(commands, workdir)
+  File "C:\Users\root\Desktop\mcp\runtime\clientCopy.py", line 116, in copyClientAssets
+    print("Looking in %s for mc installs..."%os.path.join(mcDir, "versions")),
+IOError: [Errno 2] No such file or directory
+17:10:15 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+17:22:18 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+18:07:31 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+18:10:44 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+18:15:47 - !! Missing server jar file. Aborting !!
+00:03:45 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+00:04:29 - !! Can not find server sources, try decompiling !!

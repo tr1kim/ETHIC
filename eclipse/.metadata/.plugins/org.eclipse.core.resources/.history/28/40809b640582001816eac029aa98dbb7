@@ -1,0 +1,40 @@
+package hitchbot.main;
+
+import java.util.ArrayList;
+
+public class Hitchbot {
+	
+	private ArrayList<Module> mods;
+	
+	public Hitchbot() {
+		mods = new ArrayList<Module>();
+	}
+	
+	public void addMod(Module m) {
+		mods.add(m);
+	}
+	
+	public ArrayList<Module> getModules(){
+		return mods;
+	}
+	
+	public void onUpdate() {
+		for (Module m: mods) {
+			m.onUpdate();
+		}
+	}
+	
+	public void onRender() {
+		for (Module m: mods) {
+			m.onRender();
+		}
+	}
+	
+	public void onKeyPressed(int k) {
+		for (Module m: mods) {
+			if (m.getKey() == k) {
+				m.toggle();
+			}
+		}
+	}
+}

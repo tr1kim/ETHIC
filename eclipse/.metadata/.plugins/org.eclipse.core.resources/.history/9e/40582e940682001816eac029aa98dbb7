@@ -1,0 +1,12 @@
+package hitchbot.mods;
+
+import hitchbot.main.Category;
+
+public class SimpleFlight extends Module {
+
+	public SimpleFlight(String nm, int k, Category c) {
+		super(nm, k, c);
+		// TODO Auto-generated constructor stub
+	}
+
+}

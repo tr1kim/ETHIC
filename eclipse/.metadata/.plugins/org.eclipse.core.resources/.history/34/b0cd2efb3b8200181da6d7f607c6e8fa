@@ -1,0 +1,32 @@
+package hitchbot.mods;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+
+public class ToggleSprint extends Module {
+
+	public ToggleSprint() {
+		super("ToggleSprint", Keyboard.KEY_I, Category.PLAYER);
+		// TODO Auto-generated constructor stub
+	}
+	public void onUpdate() {
+		if (this.isToggled()) {
+			try {
+		        Robot robot = new Robot();
+		        // Simulate ctrl press
+		        robot.keyPress(KeyEvent.VK_L);
+		        robot.keyRelease(KeyEvent.VK_L);
+		        
+			} catch (AWTException e) {
+			        e.printStackTrace();
+			}
+		}
+		super.onUpdate();
+	}
+}

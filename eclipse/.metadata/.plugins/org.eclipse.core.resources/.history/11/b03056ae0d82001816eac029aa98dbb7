@@ -1,0 +1,12 @@
+package hitchbot.main;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiIngame;
+
+public class GuiIngameHook extends GuiIngame{
+
+	public GuiIngameHook(Minecraft mcIn) {
+		super(mcIn);
+	}
+
+}
