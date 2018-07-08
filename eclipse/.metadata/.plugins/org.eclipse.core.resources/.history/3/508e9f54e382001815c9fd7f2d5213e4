@@ -197,7 +197,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    }
             				}
             				if (ent != null) {
-            					double mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					double mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/50+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
             					double ySpeed = ent.posY - ent.lastTickPosY;
             					double posY = ent.posY;
