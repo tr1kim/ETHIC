@@ -12,6 +12,7 @@ public class rayTrace {
 		double zdif = z2-z1;
 		double distpre = Math.sqrt(xdif*xdif+ydif*ydif);
 		double dist = Math.sqrt(distpre*distpre+zdif*zdif); 
+		
 		int counter = 0;
 		while (counter<dist*10) {
 			if (Minecraft.getMinecraft().theWorld.getBlockState(new BlockPos(x1+xdif*((double)counter)/10/dist, y1+ydif*((double)counter)/10/dist, z1+zdif*((double)counter)/10/dist)).getBlock() != Blocks.air) {

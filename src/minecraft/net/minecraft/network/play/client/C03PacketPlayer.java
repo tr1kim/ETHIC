@@ -12,6 +12,7 @@ import hitchbot.utils.rayTrace;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.INetHandlerPlayServer;
@@ -153,7 +154,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.pitch = playerPitch;
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
-            		if (m.isToggled()) {
+            		if (m.isToggled() && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
             			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
             				Entity ent = null;
 
@@ -287,7 +288,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.pitch = playerPitch;
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
-            		if (m.isToggled()) {
+            		if (m.isToggled() && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
             			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
             				Entity ent = null;
 

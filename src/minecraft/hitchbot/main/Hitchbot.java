@@ -23,12 +23,24 @@ public class Hitchbot {
 	private static CommandManager cmdManager;
 	private static String lastTarget = "None";
 	public static hitchbot.tabGui.tabManager tabManager;
+	public static ArrayList<Integer> guns;
 	
 	public Hitchbot() {
 		mods = new ArrayList<Module>();
 		cmdManager = new CommandManager();
 		friends = new ArrayList<String>();
 		tabManager = new hitchbot.tabGui.tabManager();
+		guns = new ArrayList<Integer>();
+		guns.add(279); //barret
+		guns.add(278); //spass-12
+		guns.add(284); //p90
+		guns.add(293); //ak47
+		guns.add(275); //tg/awp
+		guns.add(258); //msr
+		guns.add(291); //model
+		guns.add(292); //sawed
+		guns.add(256); //mauser
+		guns.add(257); //m10
 		addMod(new SimpleFlight());
 		addMod(new WarzAim());
 		addMod(new ToggleSprint());
