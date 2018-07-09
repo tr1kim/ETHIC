@@ -1,0 +1,18 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+
+public class FullBright extends Module {
+
+	public FullBright() {
+		super("FullBright", Keyboard.KEY_O, Category.RENDER);
+	}
+
+	@Override
+	public void onUpdate() {
+		// TODO Auto-generated method stub
+		super.onUpdate();
+	}
+}

@@ -152,9 +152,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.yaw = playerYaw;
             this.pitch = playerPitch;
             for (Module m: Hitchbot.getModules()) {
-            	if (m.getName().equalsIgnoreCase("WarzAim")) {
+            	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
             		if (m.isToggled()) {
-            			if (Mouse.isButtonDown(2)) {
+            			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
             				Entity ent = null;
             				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
@@ -280,9 +280,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.yaw = playerYaw;
             this.pitch = playerPitch;
             for (Module m: Hitchbot.getModules()) {
-            	if (m.getName().equalsIgnoreCase("WarzAim")) {
+            	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
             		if (m.isToggled()) {
-            			if (Mouse.isButtonDown(2)) {
+            			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
             				Entity ent = null;
             				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
@@ -353,7 +353,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             					double ySpeed = ent.posY - ent.lastTickPosY;
             					double posY = ent.posY;
             					if (ent.isAirBorne) {
-            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
+            						posY=posY + ySpeed*mult*0.5  - 0.02*mult*mult;
             					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;

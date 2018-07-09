@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import hitchbot.command.CommandManager;
 import hitchbot.mods.AutoSteak;
+import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
 import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
 import hitchbot.mods.SimpleFlight;
 import hitchbot.mods.ToggleSprint;
 import hitchbot.mods.WarzAim;
+import hitchbot.mods.WarzAimNS;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.server.S02PacketChat;
 import net.minecraft.util.ChatComponentText;
@@ -33,6 +35,8 @@ public class Hitchbot {
 		addMod(new PlayerEsp());
 		addMod(new OptifineZoom());
 		addMod(new AutoSteak());
+		addMod(new WarzAimNS());
+		addMod(new FullBright());
 	}
 	
 	public static void addFriend(String n) {

@@ -7,12 +7,14 @@ import org.lwjgl.input.Keyboard;
 
 import hitchbot.main.Hitchbot;
 import hitchbot.mods.AutoSteak;
+import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
 import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
 import hitchbot.mods.SimpleFlight;
 import hitchbot.mods.ToggleSprint;
 import hitchbot.mods.WarzAim;
+import hitchbot.mods.WarzAimNS;
 
 public class tabManager {
 	private ArrayList<Tab>  tabs;
@@ -36,12 +38,14 @@ public class tabManager {
 		
 		renderMods.put(0, new PlayerEsp());
 		renderMods.put(1, new OptifineZoom());
+		renderMods.put(2, new FullBright());
 		
 		movementMods.put(0, new ToggleSprint());
 		movementMods.put(1, new SimpleFlight());
 		
 		combatMods.put(0, new WarzAim());
 		combatMods.put(1, new AutoSteak());
+		combatMods.put(2, new WarzAimNS());
 	}
 	
 	public int getCurrentTab () {
