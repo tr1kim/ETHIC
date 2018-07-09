@@ -156,22 +156,15 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             		if (m.isToggled()) {
             			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
             				Entity ent = null;
-
+            				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
+	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
+            					for (Entity e : entities) {
+            						if (e.getName().equals(Hitchbot.getLastTarget())) {
+            							ent = e;
+            						}
+            					}
+            				}else {
             					float cls = 50;
-                				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
-    	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
-                					for (Entity e : entities) {
-                						if (e.getName().equals(Hitchbot.getLastTarget())) {
-                							ent = e;
-					    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
-					    					if (cls < 6) {
-					    						cls = 0.1F;
-					    					}else {
-					    						cls = (float) (cls / 1.7);
-					    					}
-                						}
-                					}
-                				}
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
@@ -217,6 +210,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 						    				}
 						    			}
 		            			    }
+	            			    }
             				}
             				if (ent != null) {
             					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
@@ -290,22 +284,15 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             		if (m.isToggled()) {
             			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
             				Entity ent = null;
-
+            				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
+	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
+            					for (Entity e : entities) {
+            						if (e.getName().equals(Hitchbot.getLastTarget())) {
+            							ent = e;
+            						}
+            					}
+            				}else {
             					float cls = 50;
-                				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
-    	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
-                					for (Entity e : entities) {
-                						if (e.getName().equals(Hitchbot.getLastTarget())) {
-                							ent = e;
-					    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
-					    					if (cls < 6) {
-					    						cls = 0.1F;
-					    					}else {
-					    						cls = (float) (cls / 1.7);
-					    					}
-                						}
-                					}
-                				}
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
@@ -351,6 +338,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 						    				}
 						    			}
 		            			    }
+	            			    }
             				}
             				if (ent != null) {
             					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;

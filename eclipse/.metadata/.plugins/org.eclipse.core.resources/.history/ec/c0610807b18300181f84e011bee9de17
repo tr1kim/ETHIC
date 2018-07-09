@@ -43,8 +43,8 @@ public class GuiIngameHook extends GuiIngame{
     	return false;
     }
     public void drawTabGui() {
-    	drawRect(75, 8, 5, 18, 0xaf676c6e);
-    	mc.fontRendererObj.drawString("ETHIC v1.0", 9, 10, 0xff0000);
+    	drawRect(75, 5, 5, 15, 0xaf676c6e);
+    	mc.fontRendererObj.drawString("ETHIC v1.0", 9, 7, 0xff0000);
     	
     	drawRect(75, 25, 5, 45, Hitchbot.tabManager.getCurrentTab() == 0 ? 0xaf0d0d0d : 0xaf676c6e);
     	mc.fontRendererObj.drawString("Render", 9, 31, 0xffffffff);

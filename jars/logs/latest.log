@@ -1,23 +1,34 @@
-[21:32:20] [Client thread/INFO]: Setting user: Player232
-[21:32:20] [Client thread/INFO]: (Session ID is token:0:Player232)
-[21:32:22] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:32:23] [Client thread/INFO]: Reloading ResourceManager: Default
-[21:32:23] [Client thread/ERROR]: Couldn't initialize twitch stream
-[21:32:23] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:32:23] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[21:32:23] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:32:23] [Thread-6/INFO]: OpenAL initialized.
-[21:32:23] [Sound Library Loader/INFO]: Sound engine started
-[21:32:24] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:32:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[21:32:31] [Server thread/INFO]: Generating keypair
-[21:32:31] [Server thread/INFO]: Preparing start region for level 0
-[21:32:32] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:32:32] [Server thread/INFO]: Player232[local:E:d127c620] logged in with entity id 27 at (340.97811091930714, 71.0155550727022, 376.0423524088673)
-[21:32:32] [Server thread/INFO]: Player232 joined the game
-[21:32:32] [Server thread/INFO]: Saving and pausing game...
-[21:32:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[21:32:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[21:32:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[21:33:02] [Server thread/INFO]: Player232 has just earned the achievement [Taking Inventory]
-[21:33:02] [Client thread/INFO]: [CHAT] Player232 has just earned the achievement [Taking Inventory]
+[21:48:31] [Client thread/INFO]: Setting user: Player996
+[21:48:31] [Client thread/INFO]: (Session ID is token:0:Player996)
+[21:48:33] [Client thread/INFO]: LWJGL Version: 2.9.4
+[21:48:34] [Client thread/INFO]: Reloading ResourceManager: Default
+[21:48:34] [Client thread/ERROR]: Couldn't initialize twitch stream
+[21:48:34] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:48:34] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[21:48:34] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:48:34] [Thread-6/INFO]: OpenAL initialized.
+[21:48:34] [Sound Library Loader/INFO]: Sound engine started
+[21:48:39] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:48:43] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[21:48:43] [Server thread/INFO]: Generating keypair
+[21:48:43] [Server thread/INFO]: Preparing start region for level 0
+[21:48:43] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:48:44] [Server thread/INFO]: Player996[local:E:69739dbf] logged in with entity id 24 at (271.75271983855555, 70.0, 498.4024921297625)
+[21:48:44] [Server thread/INFO]: Player996 joined the game
+[21:48:56] [Server thread/INFO]: [Player996: Set the time to 1000]
+[21:48:56] [Client thread/INFO]: [CHAT] Set the time to 1000
+[21:50:08] [Server thread/INFO]: Player996 has just earned the achievement [Taking Inventory]
+[21:50:08] [Client thread/INFO]: [CHAT] Player996 has just earned the achievement [Taking Inventory]
+[21:50:09] [Server thread/INFO]: Saving and pausing game...
+[21:50:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[21:50:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[21:50:09] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[21:50:10] [Server thread/INFO]: Stopping server
+[21:50:10] [Server thread/INFO]: Saving players
+[21:50:10] [Server thread/INFO]: Saving worlds
+[21:50:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[21:50:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[21:50:10] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[21:50:10] [Client thread/INFO]: Stopping!
+[21:50:10] [Client thread/INFO]: SoundSystem shutting down...
+[21:50:11] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
