@@ -177,9 +177,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
 						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
 		            					try {
-		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
 		            					}catch(NullPointerException ex){
 		            						ex.printStackTrace();
 		            					}finally{
@@ -222,7 +222,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             				if (ent != null) {
             					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
@@ -311,9 +311,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
 						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
 		            					try {
-		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
 		            					}catch(NullPointerException ex){
 		            						ex.printStackTrace();
 		            					}finally{
@@ -356,7 +356,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             				if (ent != null) {
             					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
