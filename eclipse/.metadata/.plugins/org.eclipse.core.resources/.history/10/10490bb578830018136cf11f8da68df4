@@ -1,0 +1,29 @@
+package hitchbot.tabGui;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import hitchbot.mods.Module;
+
+public class tabManager {
+	private ArrayList<Tab>  tabs;
+	private int currentTab;
+	
+	private HashMap<Integer, Module> renderMods, movementMods, combatMods;
+	private int currentRenderMod, currentMovementMod, currentCombatMods;
+	
+	public tabManager() {
+		tabs = new ArrayList();
+		currentTab = 0;
+		tabs.add(new tab1());
+		tabs.add(new tab2());
+		tabs.add(new tab3());
+		renderMods = new HashMap();
+		movementMods = new HashMap();
+		currentRenderMod
+	}
+	
+	public void keyPressed(int k) {
+		
+	}
+}

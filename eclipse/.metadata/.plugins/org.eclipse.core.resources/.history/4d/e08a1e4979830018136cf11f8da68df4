@@ -1,0 +1,46 @@
+package hitchbot.tabGui;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.mods.Module;
+
+public class tabManager {
+	private ArrayList<Tab>  tabs;
+	private int currentTab;
+	
+	private HashMap<Integer, Module> renderMods, movementMods, combatMods;
+	private int currentRenderMod, currentMovementMod, currentCombatMod;
+	
+	public tabManager() {
+		tabs = new ArrayList();
+		currentTab = 0;
+		tabs.add(new tab1());
+		tabs.add(new tab2());
+		tabs.add(new tab3());
+		renderMods = new HashMap();
+		movementMods = new HashMap();
+		combatMods = new HashMap();
+		currentRenderMod = 0;
+		currentMovementMod = 0;
+		currentCombatMod = 0;
+	}
+	
+	public void keyPressed(int k) {
+		switch (k) {
+		case Keyboard.KEY_UP:
+			if (tabs.get(currentTab).isExpanded()) {
+				switch (currentTab) {
+				case 0:
+					if (currentRenderMod != 0) {
+						
+					}
+					break;
+				}
+			}
+			break;
+		}
+	}
+}

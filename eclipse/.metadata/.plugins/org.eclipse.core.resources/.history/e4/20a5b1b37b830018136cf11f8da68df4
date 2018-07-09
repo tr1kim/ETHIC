@@ -1,0 +1,117 @@
+package hitchbot.tabGui;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
+import hitchbot.mods.OptifineZoom;
+import hitchbot.mods.PlayerEsp;
+
+public class tabManager {
+	private ArrayList<Tab>  tabs;
+	private int currentTab;
+	
+	private HashMap<Integer, Module> renderMods, movementMods, combatMods;
+	private int currentRenderMod, currentMovementMod, currentCombatMod;
+	
+	public tabManager() {
+		tabs = new ArrayList();
+		currentTab = 0;
+		tabs.add(new tab1());
+		tabs.add(new tab2());
+		tabs.add(new tab3());
+		renderMods = new HashMap();
+		movementMods = new HashMap();
+		combatMods = new HashMap();
+		currentRenderMod = 0;
+		currentMovementMod = 0;
+		currentCombatMod = 0;
+		
+		renderMods.put(0, new PlayerEsp());
+		renderMods.put(1, new OptifineZoom());
+	}
+	
+	public void keyPressed(int k) {
+		switch (k) {
+		case Keyboard.KEY_UP:
+			if (tabs.get(currentTab).isExpanded()) {
+				switch (currentTab) {
+				case 0:
+					if (currentRenderMod != 0) {
+						currentRenderMod--;
+					}
+					break;
+				case 1:
+					if (currentRenderMod != 0) {
+						currentMovementMod--;
+					}
+					break;
+				case 2:
+					if (currentCombatMod != 0) {
+						currentCombatMod--;
+					}
+					break;
+				}
+				
+			}
+			break;
+	case Keyboard.KEY_DOWN:
+		if (tabs.get(currentTab).isExpanded()) {
+			switch (currentTab) {
+			case 0:
+				if (currentRenderMod != renderMods.size()) {
+					currentRenderMod++;
+				}
+				break;
+			case 1:
+				if (currentRenderMod != renderMods.size()) {
+					currentMovementMod++;
+				}
+				break;
+			case 2:
+				if (currentCombatMod != combatMods.size()) {
+					currentCombatMod++;
+				}
+				break;
+			}
+			
+		}
+		break;
+	
+	case Keyboard.KEY_RIGHT:
+		if (tabs.get(currentTab).isExpanded()) {
+			switch (currentTab) {
+			case 0:
+				toggleMod(renderMods.get(currentRenderMod).getName());
+				break;
+			case 1:
+				toggleMod(movementMods.get(currentMovementMod).getName());
+				break;
+			case 2:
+				toggleMod(movementMods.get(currentCombatMod).getName());
+				break;
+			}
+		}
+		break;
+	
+	case Keyboard.KEY_LEFT:
+		if (tabs.get(currentTab).isExpanded()) {
+			tabs.get(currentTab).setExpanded(false);
+		}
+		break;
+	
+	}
+	}
+
+	private void toggleMod(String n) {
+		for (Module m: Hitchbot.getModules()) {
+			if (m.getName().equalsIgnoreCase(n)) {
+				m.toggle();
+				break;
+			}
+		}
+	}
+}

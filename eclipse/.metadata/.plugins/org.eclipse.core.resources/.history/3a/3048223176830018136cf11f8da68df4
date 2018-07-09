@@ -1,0 +1,5 @@
+package hitchbot.tabGui;
+
+public abstract class Tab {
+
+}

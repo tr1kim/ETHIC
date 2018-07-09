@@ -1928,6 +1928,9 @@ public class Minecraft implements IThreadListener, IPlayerUsage
                     {
                     	//hitchbot
                     	Hitchbot.onKeyPressed(k);
+                    	
+                    	Hitchbot.tabManager.keyPressed(k);
+                    	
                         if (k == 1)
                         {
                             this.displayInGameMenu();

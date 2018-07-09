@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.util.List;
 
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 
 import hitchbot.main.Hitchbot;
 import hitchbot.mods.Module;
+import hitchbot.utils.rayTrace;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,6 +16,7 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.INetHandlerPlayServer;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.Vec3;
 
 public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 {
@@ -151,7 +154,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim")) {
             		if (m.isToggled()) {
-            			if (Keyboard.isKeyDown(Keyboard.getKeyIndex("V"))) {
+            			if (Mouse.isButtonDown(2)) {
             				Entity ent = null;
             				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
@@ -166,11 +169,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
 						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-						    			
-						    			double Z = e.posZ - Minecraft.getMinecraft().thePlayer.posZ;
-						    			double X = e.posX - Minecraft.getMinecraft().thePlayer.posX;
-						    			double Y = Minecraft.getMinecraft().thePlayer.posY-e.posY;
-						    			
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+		            					try {
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+		            					}catch(NullPointerException ex){
+		            						ex.printStackTrace();
+		            					}finally{
+		            						
+		            					}
+		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
+		            					double ySpeed = e.posY - e.lastTickPosY;
+		            					double posY = e.posY;
+		            					if (e.isAirBorne) {
+		            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
+		            					}
+		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
+						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
+						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
+						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
 						    			double pitche = ((90-Minecraft.getMinecraft().thePlayer.rotationPitch) * Math.PI) / 180;
 						    			double currentyawe  = currentrotation1+90;
 						    			if (currentyawe < 0) {
@@ -186,7 +202,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= 45)&&(currentyawe-yawe>= -45)) || ((currentyawe-yawe<= 405)&&(currentyawe-yawe>= 315)) || ((currentyawe-yawe>= -405)&&(currentyawe-yawe<= -315)))) {
+						    			if ((((currentyawe-yawe<= 45)&&(currentyawe-yawe>= -45)) || ((currentyawe-yawe<= 405)&&(currentyawe-yawe>= 315)) || ((currentyawe-yawe>= -405)&&(currentyawe-yawe<= -315))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls) {
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
@@ -197,12 +213,19 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    }
             				}
             				if (ent != null) {
-            					double mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					try {
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					}catch(NullPointerException e){
+            						e.printStackTrace();
+            					}finally{
+            						
+            					}
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
             					double ySpeed = ent.posY - ent.lastTickPosY;
             					double posY = ent.posY;
             					if (ent.isAirBorne) {
-            						posY=posY + ySpeed  - 0.04*mult*mult;
+            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
             					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
@@ -212,6 +235,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
+				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+				    				Hitchbot.setLastTarget("None");
+				    			}
             				}
             			}else {
             				Hitchbot.setLastTarget("None");
@@ -256,7 +282,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim")) {
             		if (m.isToggled()) {
-            			if (Keyboard.isKeyDown(Keyboard.getKeyIndex("V"))) {
+            			if (Mouse.isButtonDown(2)) {
             				Entity ent = null;
             				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
@@ -271,11 +297,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
 						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-						    			
-						    			double Z = e.posZ - Minecraft.getMinecraft().thePlayer.posZ;
-						    			double X = e.posX - Minecraft.getMinecraft().thePlayer.posX;
-						    			double Y = Minecraft.getMinecraft().thePlayer.posY-e.posY;
-						    			
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+		            					try {
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+		            					}catch(NullPointerException ex){
+		            						ex.printStackTrace();
+		            					}finally{
+		            						
+		            					}
+		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
+		            					double ySpeed = e.posY - e.lastTickPosY;
+		            					double posY = e.posY;
+		            					if (e.isAirBorne) {
+		            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
+		            					}
+		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
+						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
+						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
+						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
 						    			double pitche = ((90-Minecraft.getMinecraft().thePlayer.rotationPitch) * Math.PI) / 180;
 						    			double currentyawe  = currentrotation1+90;
 						    			if (currentyawe < 0) {
@@ -291,7 +330,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= 45)&&(currentyawe-yawe>= -45)) || ((currentyawe-yawe<= 405)&&(currentyawe-yawe>= 315)) || ((currentyawe-yawe>= -405)&&(currentyawe-yawe<= -315)))) {
+						    			if ((((currentyawe-yawe<= 45)&&(currentyawe-yawe>= -45)) || ((currentyawe-yawe<= 405)&&(currentyawe-yawe>= 315)) || ((currentyawe-yawe>= -405)&&(currentyawe-yawe<= -315))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls) {
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
@@ -302,12 +341,19 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    }
             				}
             				if (ent != null) {
-            					double mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					try {
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/30+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					}catch(NullPointerException e){
+            						e.printStackTrace();
+            					}finally{
+            						
+            					}
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
             					double ySpeed = ent.posY - ent.lastTickPosY;
             					double posY = ent.posY;
             					if (ent.isAirBorne) {
-            						posY=posY + ySpeed  - 0.04*mult*mult;
+            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
             					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
@@ -317,6 +363,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
+				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+				    				Hitchbot.setLastTarget("None");
+				    			}
             				}
             			}else {
             				Hitchbot.setLastTarget("None");

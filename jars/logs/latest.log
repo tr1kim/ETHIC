@@ -1,75 +1,567 @@
-[22:51:18] [Client thread/INFO]: Setting user: Player424
-[22:51:18] [Client thread/INFO]: (Session ID is token:0:Player424)
-[22:51:20] [Client thread/INFO]: LWJGL Version: 2.9.4
-[22:51:22] [Client thread/INFO]: Reloading ResourceManager: Default
-[22:51:22] [Client thread/ERROR]: Couldn't initialize twitch stream
-[22:51:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[22:51:22] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[22:51:22] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:51:22] [Thread-6/INFO]: OpenAL initialized.
-[22:51:22] [Sound Library Loader/INFO]: Sound engine started
-[22:51:24] [Client thread/INFO]: Created: 512x512 textures-atlas
-[22:51:58] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[22:51:58] [Server thread/INFO]: Generating keypair
-[22:51:58] [Server thread/INFO]: Preparing start region for level 0
-[22:51:59] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:51:59] [Server thread/INFO]: Player424[local:E:36db1b12] logged in with entity id 133 at (570.7059447148403, 68.0, 183.8967318304002)
-[22:51:59] [Server thread/INFO]: Player424 joined the game
-[22:52:01] [Server thread/INFO]: Saving and pausing game...
-[22:52:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:52:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:52:01] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:52:03] [Client thread/INFO]: Using default channel type
-[22:52:03] [Client thread/INFO]: Started on 51879
-[22:52:03] [Client thread/INFO]: [CHAT] Local game hosted on port 51879
-[22:52:08] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
-[22:52:08] [Server thread/INFO]: Hitchens[/192.168.8.109:51902] logged in with entity id 206 at (591.0983308663884, 70.0, 134.21459440176014)
-[22:52:08] [Server thread/INFO]: Hitchens joined the game
-[22:52:08] [Client thread/INFO]: [CHAT] Hitchens joined the game
-[22:52:17] [Server thread/INFO]: Player424 has just earned the achievement [Taking Inventory]
-[22:52:17] [Client thread/INFO]: [CHAT] Player424 has just earned the achievement [Taking Inventory]
-[22:55:56] [Client thread/INFO]: Stopping!
-[22:55:56] [Client thread/INFO]: SoundSystem shutting down...
-[22:55:57] [Server [22:55:58] [Client thread/INFO]: LWJGL Version: 2.9.4
-[22:56:00] [Client thread/INFO]: Reloading ResourceManager: Default
-[22:56:00] [Client thread/ERROR]: Couldn't initialize twitch stream
-[22:56:00] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[22:56:00] [Thread-5/INFO]: Initializing LWJGL OpenAL
-[22:56:00] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[22:56:00] [Thread-5/INFO]: OpenAL initialized.
-[22:56:01] [Sound Library Loader/INFO]: Sound engine started
-[22:56:02] [Client thread/INFO]: Created: 512x512 textures-atlas
-[22:56:10] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[22:56:10] [Server thread/INFO]: Generating keypair
-[22:56:10] [Server thread/INFO]: Preparing start region for level 0
-[22:56:11] [Server thread/INFO]: Changing view distance to 12, from 10
-[22:56:11] [Server thread/INFO]: Player382[local:E:ee10f083] logged in with entity id 172 at (582.2542426596938, 70.0, 138.64971280382142)
-[22:56:11] [Server thread/INFO]: Player382 joined the game
-[22:56:12] [Server thread/INFO]: Saving and pausing game...
-[22:56:12] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:56:12] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:56:12] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:56:14] [Client thread/INFO]: Using default channel type
-[22:56:14] [Client thread/INFO]: Started on 52296
-[22:56:14] [Client thread/INFO]: [CHAT] Local game hosted on port 52296
-[22:56:19] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
-[22:56:19] [Server thread/INFO]: Hitchens[/192.168.8.109:52319] logged in with entity id 272 at (591.0983308663884, 70.0, 134.21459440176014)
-[22:56:19] [Server thread/INFO]: Hitchens joined the game
-[22:56:19] [Client thread/INFO]: [CHAT] Hitchens joined the game
-[22:56:28] [Client thread/INFO]: [CHAT] [HITCHBOT] > dfsdfsdf
-[22:56:28] [Client thread/INFO]: [CHAT] [HITCHBOT] > Added Hitchens to your friend list
-[22:56:45] [Server thread/INFO]: Player382 has just earned the achievement [Taking Inventory]
-[22:56:45] [Client thread/INFO]: [CHAT] Player382 has just earned the achievement [Taking Inventory]
-[22:57:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > Removed Hitchens from your friend list
-[22:57:32] [Server thread/INFO]: Player382 lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
-[22:57:32] [Server thread/INFO]: Player382 left the game
-[22:57:32] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[22:57:32] [Server thread/INFO]: Stopping server
-[22:57:32] [Server thread/INFO]: Saving players
-[22:57:32] [Server thread/INFO]: Saving worlds
-[22:57:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[22:57:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[22:57:32] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[22:57:34] [Client thread/INFO]: Stopping!
-[22:57:34] [Client thread/INFO]: SoundSystem shutting down...
-[22:57:34] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[19:34:47] [Client thread/INFO]: Setting user: Player141
+[19:34:47] [Client thread/INFO]: (Session ID is token:0:Player141)
+[19:34:49] [Client thread/INFO]: LWJGL Version: 2.9.4
+[19:34:50] [Client thread/INFO]: Reloading ResourceManager: Default
+[19:34:50] [Client thread/ERROR]: Couldn't initialize twitch stream
+[19:34:50] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[19:34:50] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[19:34:50] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:34:50] [Thread-6/INFO]: OpenAL initialized.
+[19:34:51] [Sound Library Loader/INFO]: Sound engine started
+[19:34:52] [Client thread/INFO]: Created: 512x512 textures-atlas
+[19:36:41] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[19:36:41] [Server thread/INFO]: Generating keypair
+[19:36:42] [Server thread/INFO]: Preparing start region for level 0
+[19:36:42] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:36:42] [Server thread/INFO]: Player141[local:E:538e4d27] logged in with entity id 24 at (289.9506611008766, 82.0, 439.09132040028476)
+[19:36:42] [Server thread/INFO]: Player141 joined the game
+[19:36:43] [Server thread/INFO]: Saving and pausing game...
+[19:36:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[19:36:44] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[19:36:44] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[19:36:45] [Client thread/INFO]: Using default channel type
+[19:36:45] [Client thread/INFO]: Started on 54948
+[19:36:45] [Client thread/INFO]: [CHAT] Local game hosted on port 54948
+[19:36:52] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
+[19:36:52] [Server thread/INFO]: Hitchens[/192.168.8.109:54965] logged in with entity id 447 at (290.2132388016029, 82.0, 439.36323912623186)
+[19:36:52] [Server thread/INFO]: Hitchens joined the game
+[19:36:52] [Client thread/INFO]: [CHAT] Hitchens joined the game
+[19:37:07] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:07] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.3675332344015
+[19:37:08] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.24128475848005
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.2966083925392144
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.026752700188728
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.75367388372376
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.47877148812595
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.202965302597701
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.052514169895028
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 5.970412827706341
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 5.9252839215236595
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > 5.900644159363119
+[19:37:09] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.705362358444208
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.125434310289478
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.3382763833320075
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.195027253414628
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.624406240224125
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.83933438622911
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > 9.020966732368164
+[19:37:10] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > 10.213080783502987
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 38
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > 12.006088010317283
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 24
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > 12.664969086064389
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 23
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > 13.411111432740945
+[19:37:11] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 21
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.163784972738583
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 19
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.258782374919441
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 19
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 14.46752614190502
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 20
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 13.560736156103651
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 21
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 12.623246250430807
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 22
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 11.716605762685296
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 25
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 10.890689018565578
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > 9.645111986398817
+[19:37:12] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 36
+[19:37:13] [Client thread/INFO]: [CHAT] [HITCHBOT] > 9.645111986398817
+[19:37:13] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 36
+[19:37:13] [Client thread/INFO]: [CHAT] [HITCHBOT] > 9.645111986398817
+[19:37:13] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 36
+[19:37:13] [Client thread/INFO]: [CHAT] [HITCHBOT] > 9.645111986398817
+[19:37:13] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 36
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 10.962642649151846
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 10.962642649151846
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 11.294774084414946
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 11.63167704136987
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 12.28744909633581
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 12.596580522635271
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 12.889637693273054
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 13.423392302882611
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > 13.612790532327125
+[19:37:15] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 14.318222798999289
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 14.73679678808247
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 14.957386311390357
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.177470069205707
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.393081280459187
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.601460033570214
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.80076585770672
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.98985111419914
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.16808465275263
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.335215831607602
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.491270364336895
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.636470969211818
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.771177202492012
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.923037438122748
+[19:37:16] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.710421391452101
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.710421391452101
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.756411739289064
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.780585502074597
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.806872135080129
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > 15.834326676790715
+[19:37:18] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:19] [Client thread/INFO]: [CHAT] [HITCHBOT] > 17.34602175309079
+[19:37:19] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 35
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.32267530965885
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.32267530965885
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.30234034770711
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.28542313834445
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.271347304618544
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.241762662277573
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.241762662277573
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > 16.23499908754289
+[19:37:21] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:29] [Server thread/INFO]: Player141 has just earned the achievement [Taking Inventory]
+[19:37:29] [Client thread/INFO]: [CHAT] Player141 has just earned the achievement [Taking Inventory]
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.651591963461994
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.651591963461994
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.665950098954493
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.686035506702883
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.727843110155588
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.734214010960946
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.748773110003926
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.78718885291593
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.848447415988892
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.838492184300659
+[19:37:33] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.553289352013602
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.50315563274278
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.458351248461728
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.427105747701075
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.390616218093387
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.351025125446895
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.298327226680014
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.242034392842909
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.183390999917085
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.118483485344218
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.053779750765793
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.938458162934692
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.8869638542514116
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.841768350274954
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.775554399945924
+[19:37:34] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.753443082020238
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.733881289320017
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.709669026592797
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 37
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.754898078584971
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.829971281678091
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.910206488614028
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.952890519927079
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.951857872838846
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.902403320772232
+[19:37:35] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.17205510295243
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.259450249614293
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.34730565557774
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.43986548318369
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.535880720965494
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.626806818785749
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.713475479791601
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.796802813957035
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.876791927589709
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.952448917654461
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.952448917654461
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.935837308722546
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.87149895429967
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.871959828355214
+[19:37:36] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:37] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.549292732536685
+[19:37:37] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:38] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.889511463335968
+[19:37:38] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:38] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.889511463335968
+[19:37:38] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:38] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.889511463335968
+[19:37:38] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:39] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:39] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:39] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:39] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:39] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:39] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:40] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:41] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.556749596916546
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:43] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.559775901822283
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.56610895133991
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.585759801107239
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.590278473219506
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.592844868310094
+[19:37:44] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.594275663690857
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591171787059979
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.591010690856299
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.596547589132763
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.601491295563983
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.599591818543233
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.600445550766457
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.601475286467107
+[19:37:45] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.602654223594792
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.598331037632093
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.595484320592805
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.595655958629582
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.601471753281071
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.606566199144892
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.60991881255578
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.611919362390001
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.613062310229195
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.609868080949568
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.623284428483625
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.62852764397875
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.632983807662018
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.635891121173993
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.637619740669455
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.638605640876554
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.64265432572601
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.65110260459355
+[19:37:46] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 36
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.65913482418783
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.65913482418783
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:47] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.657344021899437
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.65402608893163
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 38
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.649022035512816
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 35
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.646862020710246
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 34
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.64666296884068
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.6525470084146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.6525470084146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.6525470084146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.6525470084146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.6525470084146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.6525470084146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 33
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.65706647854661
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 32
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.664438934270008
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.66957912984755
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.672717394431146
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.674529659466035
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.678964781980728
+[19:37:48] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.681393573694079
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.677326501709691
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.670397518312733
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.667729548339949
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.666605690614825
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.679504496459442
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.61195539228077
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 30
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.52143650081485
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 29
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.415349819827451
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 31
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 8.115505693114136
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > TRUE: 35
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.274350071776207
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.274350071776207
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.135323638772688
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 7.005381480089304
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.875982096454675
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.759094416793427
+[19:37:49] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.659513274059191
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > 6.412479776286662
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > 5.98585170417584
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > 5.907743483433967
+[19:37:50] [Client thread/INFO]: [CHAT] [HITCHBOT] > FALSE
+[19:37:55] [Server thread/INFO]: Hitchens lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
+[19:37:55] [Server thread/INFO]: Hitchens left the game
+[19:37:55] [Client thread/INFO]: [CHAT] Hitchens left the game

@@ -1,0 +1,47 @@
+package hitchbot.main;
+
+import hitchbot.mods.Module;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiIngame;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.GlStateManager;
+
+public class GuiIngameHook extends GuiIngame{
+
+	public GuiIngameHook(Minecraft mcIn) {
+		super(mcIn);
+	}
+
+    public void renderGameOverlay(float partialTicks)
+    {
+    	super.renderGameOverlay(partialTicks);
+        ScaledResolution scaledresolution = new ScaledResolution(this.mc);
+        this.mc.entityRenderer.setupOverlayRendering();
+        GlStateManager.enableBlend();
+        mc.fontRendererObj.drawString("ETHIC v1.0 - Dev" , 2, 2+(0*10), 0xff0000);
+        int count = 1;
+        for (Module m: Hitchbot.getModules()) {
+        	if(m.isToggled())
+        	{
+        		mc.fontRendererObj.drawString(m.getName(), 2, 2+(count*10), 0x00ff00);
+        		count++;
+        	}
+        }
+        drawTabGui();
+    }
+    
+    public void drawTabGui() {
+    	drawRect(75, 20, 5, 40, Hitchbot.tabManager.getCurrentTab() == 0 ? 0xaf0d0d0d : 0xaf676c6e);
+    	mc.fontRendererObj.drawString("Render", 9, 26, 0xffffffff);
+    	
+    	drawRect(75, 20, 5, 40, Hitchbot.tabManager.getCurrentTab() == 1 ? 0xaf0d0d0d : 0xaf676c6e);
+    	mc.fontRendererObj.drawString("Movement", 9, 46, 0xffffffff);
+    	
+    	if (Hitchbot.tabManager.getTabs().get(0).isExpanded()) {
+    		drawRect(145, 20, 75, 40, Hitchbot.tabManager.getCurrentRenderMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("PlayerEsp", 85, 26, 0xffffffff);
+    		drawRect(145, 20, 75, 40, Hitchbot.tabManager.getCurrentRenderMod()== 1 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("OptifineZoom", 85, 46, 0xffffffff);
+    	}
+    }
+}

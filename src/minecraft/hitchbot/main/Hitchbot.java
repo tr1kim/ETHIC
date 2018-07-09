@@ -20,11 +20,13 @@ public class Hitchbot {
 	private static ArrayList<String> friends;
 	private static CommandManager cmdManager;
 	private static String lastTarget = "None";
+	public static hitchbot.tabGui.tabManager tabManager;
 	
 	public Hitchbot() {
 		mods = new ArrayList<Module>();
 		cmdManager = new CommandManager();
 		friends = new ArrayList<String>();
+		tabManager = new hitchbot.tabGui.tabManager();
 		addMod(new SimpleFlight());
 		addMod(new WarzAim());
 		addMod(new ToggleSprint());

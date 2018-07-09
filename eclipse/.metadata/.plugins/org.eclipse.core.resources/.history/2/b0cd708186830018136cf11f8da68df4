@@ -1,0 +1,64 @@
+package hitchbot.main;
+
+import hitchbot.mods.Module;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiIngame;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.GlStateManager;
+
+public class GuiIngameHook extends GuiIngame{
+
+	public GuiIngameHook(Minecraft mcIn) {
+		super(mcIn);
+	}
+
+    public void renderGameOverlay(float partialTicks)
+    {
+    	super.renderGameOverlay(partialTicks);
+        ScaledResolution scaledresolution = new ScaledResolution(this.mc);
+        this.mc.entityRenderer.setupOverlayRendering();
+        GlStateManager.enableBlend();
+        int count = 1;
+        for (Module m: Hitchbot.getModules()) {
+        	if(m.isToggled())
+        	{
+        		mc.fontRendererObj.drawString(m.getName(), 2, Minecraft.getMinecraft().displayHeight-(Hitchbot.getModules().size()*10)+(count*10), 0x00ff00);
+        		count++;
+        	}
+        }
+        drawTabGui();
+    }
+    
+    public void drawTabGui() {
+    	drawRect(75, 5, 5, 15, 0xaf676c6e);
+    	mc.fontRendererObj.drawString("ETHIC v1.0", 9, 7, 0xff0000);
+    	
+    	drawRect(75, 25, 5, 45, Hitchbot.tabManager.getCurrentTab() == 0 ? 0xaf0d0d0d : 0xaf676c6e);
+    	mc.fontRendererObj.drawString("Render", 9, 31, 0xffffffff);
+    	
+    	drawRect(75, 45, 5, 65, Hitchbot.tabManager.getCurrentTab() == 1 ? 0xaf0d0d0d : 0xaf676c6e);
+    	mc.fontRendererObj.drawString("Movement", 9, 51, 0xffffffff);
+    	
+    	drawRect(75, 65, 5, 85, Hitchbot.tabManager.getCurrentTab() == 2 ? 0xaf0d0d0d : 0xaf676c6e);
+    	mc.fontRendererObj.drawString("Combat", 9, 71, 0xffffffff);
+    	
+    	if (Hitchbot.tabManager.getTabs().get(0).isExpanded()) {
+    		drawRect(145, 25, 75, 45, Hitchbot.tabManager.getCurrentRenderMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("PlayerEsp", 85, 31, 0xffffffff);
+    		drawRect(145, 45, 75, 65, Hitchbot.tabManager.getCurrentRenderMod()== 1 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("Zoom", 85, 51, 0xffffffff);
+    	}
+    	if (Hitchbot.tabManager.getTabs().get(1).isExpanded()) {
+    		drawRect(145, 45, 75, 65, Hitchbot.tabManager.getCurrentMovementMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("Sprint", 85, 51, 0xffffffff);
+    		drawRect(145, 65, 75, 85, Hitchbot.tabManager.getCurrentMovementMod()== 1 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("Fly", 85, 71, 0xffffffff);
+    	}
+    	if (Hitchbot.tabManager.getTabs().get(2).isExpanded()) {
+    		drawRect(145, 65, 75, 85, Hitchbot.tabManager.getCurrentCombatMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("WarzAim", 85, 71, 0xffffffff);
+    		drawRect(145, 85, 75, 105, Hitchbot.tabManager.getCurrentCombatMod()== 1 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("AutoSteak", 85, 91, 0xffffffff);
+    	}
+    }
+}
