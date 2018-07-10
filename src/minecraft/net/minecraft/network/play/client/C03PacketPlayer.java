@@ -159,20 +159,6 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             				Entity ent = null;
 
             					float cls = 50;
-                				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
-    	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
-                					for (Entity e : entities) {
-                						if (e.getName().equals(Hitchbot.getLastTarget())) {
-                							ent = e;
-					    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
-					    					if (cls < 6) {
-					    						cls = 0.1F;
-					    					}else {
-					    						cls = (float) (cls / 1.7);
-					    					}
-                						}
-                					}
-                				}
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
@@ -210,13 +196,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= 45)&&(currentyawe-yawe>= -45)) || ((currentyawe-yawe<= 405)&&(currentyawe-yawe>= 315)) || ((currentyawe-yawe>= -405)&&(currentyawe-yawe<= -315))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
-						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls) {
+						    			if ((((currentyawe-yawe<= 20)&&(currentyawe-yawe>= -20)) || ((currentyawe-yawe<= 380)&&(currentyawe-yawe>= 340)) || ((currentyawe-yawe>= -380)&&(currentyawe-yawe<= -340))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
+
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
 						    					Hitchbot.setLastTarget(e.getName());
+		                						if (e.getName().equals(Hitchbot.getLastTarget())) {
+		                							ent = e;
+							    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
+							    					if (cls < 6) {
+							    						cls = 0.1F;
+							    					}else {
+							    						cls = (float) (cls / 1.7);
+							    					}
+		                						}
 						    				}
 						    			}
+						    			
 		            			    }
             				}
             				if (ent != null) {
@@ -293,20 +290,6 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             				Entity ent = null;
 
             					float cls = 50;
-                				if (!Hitchbot.getLastTarget().equalsIgnoreCase("None")) {
-    	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
-                					for (Entity e : entities) {
-                						if (e.getName().equals(Hitchbot.getLastTarget())) {
-                							ent = e;
-					    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
-					    					if (cls < 6) {
-					    						cls = 0.1F;
-					    					}else {
-					    						cls = (float) (cls / 1.7);
-					    					}
-                						}
-                					}
-                				}
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
@@ -344,13 +327,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= 45)&&(currentyawe-yawe>= -45)) || ((currentyawe-yawe<= 405)&&(currentyawe-yawe>= 315)) || ((currentyawe-yawe>= -405)&&(currentyawe-yawe<= -315))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
-						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls) {
+						    			if ((((currentyawe-yawe<= 20)&&(currentyawe-yawe>= -20)) || ((currentyawe-yawe<= 380)&&(currentyawe-yawe>= 340)) || ((currentyawe-yawe>= -380)&&(currentyawe-yawe<= -340))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
+
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
 						    					Hitchbot.setLastTarget(e.getName());
+		                						if (e.getName().equals(Hitchbot.getLastTarget())) {
+		                							ent = e;
+							    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
+							    					if (cls < 6) {
+							    						cls = 0.1F;
+							    					}else {
+							    						cls = (float) (cls / 1.7);
+							    					}
+		                						}
 						    				}
 						    			}
+						    			
 		            			    }
             				}
             				if (ent != null) {

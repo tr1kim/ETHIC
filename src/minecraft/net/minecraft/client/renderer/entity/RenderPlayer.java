@@ -1,5 +1,9 @@
 package net.minecraft.client.renderer.entity;
 
+import java.util.ArrayList;
+
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.model.ModelPlayer;
@@ -73,6 +77,7 @@ public class RenderPlayer extends RendererLivingEntity<AbstractClientPlayer>
 
         if (clientPlayer.isSpectator())
         {
+        	
             modelplayer.setInvisible(false);
             modelplayer.bipedHead.showModel = true;
             modelplayer.bipedHeadwear.showModel = true;

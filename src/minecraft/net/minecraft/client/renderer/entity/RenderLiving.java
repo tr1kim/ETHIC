@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityHanging;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.player.EntityPlayer;
 
 public abstract class RenderLiving<T extends EntityLiving> extends RendererLivingEntity<T>
 {
@@ -105,9 +106,9 @@ public abstract class RenderLiving<T extends EntityLiving> extends RendererLivin
             double d13 = (double)((float)(d6 - d10));
             double d14 = (double)((float)(d7 - d11));
             double d15 = (double)((float)(d8 - d12));
-            GlStateManager.disableTexture2D();
             GlStateManager.disableLighting();
             GlStateManager.disableCull();
+            GlStateManager.disableBlend();
             int i = 24;
             double d16 = 0.025D;
             worldrenderer.begin(5, DefaultVertexFormats.POSITION_COLOR);
@@ -150,7 +151,6 @@ public abstract class RenderLiving<T extends EntityLiving> extends RendererLivin
                 worldrenderer.pos(x + d13 * (double)f7 + 0.0D, y + d14 * (double)(f7 * f7 + f7) * 0.5D + (double)((24.0F - (float)k) / 18.0F + 0.125F) + 0.025D, z + d15 * (double)f7).color(f4, f5, f6, 1.0F).endVertex();
                 worldrenderer.pos(x + d13 * (double)f7 + 0.025D, y + d14 * (double)(f7 * f7 + f7) * 0.5D + (double)((24.0F - (float)k) / 18.0F + 0.125F), z + d15 * (double)f7 + 0.025D).color(f4, f5, f6, 1.0F).endVertex();
             }
-
             tessellator.draw();
             GlStateManager.enableLighting();
             GlStateManager.enableTexture2D();
