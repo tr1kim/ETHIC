@@ -1,0 +1,94 @@
+[16:08:33] [Client thread/INFO]: Setting user: Player709
+[16:08:33] [Client thread/INFO]: (Session ID is token:0:Player709)
+[16:08:34] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:08:36] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:08:36] [Client thread/ERROR]: Couldn't initialize twitch stream
+[16:08:36] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:08:37] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[16:08:37] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:08:37] [Thread-6/INFO]: OpenAL initialized.
+[16:08:37] [Sound Library Loader/INFO]: Sound engine started
+[16:08:38] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:08:41] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:08:41] [Server thread/INFO]: Generating keypair
+[16:08:41] [Server thread/INFO]: Preparing start region for level 0
+[16:08:42] [Server thread/INFO]: Changing view distance to 12, from 10
+[16:08:42] [Server thread/INFO]: Player709[local:E:f79bfe4f] logged in with entity id 22 at (243.8696879588888, 68.0, 483.560681061991)
+[16:08:42] [Server thread/INFO]: Player709 joined the game
+[16:08:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAim has been enabled!
+[16:08:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAim has been dsiabled!
+[16:08:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > ToggleSprint has been enabled!
+[16:09:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PlayerEsp has been enabled!
+[16:09:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PlayerEsp has been dsiabled!
+[16:09:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PlayerEsp has been enabled!
+[16:09:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[16:09:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[16:09:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > FullBright has been enabled!
+[16:09:08] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > FullBright has been dsiabled!
+[16:09:08] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > FullBright has been enabled!
+[16:09:13] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAimNS has been enabled!
+[16:10:39] [Server thread/INFO]: Saving and pausing game...
+[16:10:39] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:10:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:10:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:10:41] [Server thread/INFO]: Stopping server
+[16:10:41] [Server thread/INFO]: Saving players
+[16:10:41] [Server thread/INFO]: Saving worlds
+[16:10:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:10:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:10:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:11:23] [Client thread/INFO]: Stopping!
+[16:11:23] [Client thread/INFO]: SoundSystem shutting down...
+[16:11:24] [Client [16:11:24] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:11:26] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:11:26] [Client thread/ERROR]: Couldn't initialize twitch stream
+[16:11:26] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:11:26] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[16:11:26] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:11:26] [Thread-5/INFO]: OpenAL initialized.
+[16:11:27] [Sound Library Loader/INFO]: Sound engine started
+[16:11:28] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:11:32] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:11:32] [Server thread/INFO]: Generating keypair
+[16:11:32] [Server thread/INFO]: Preparing start region for level 0
+[16:11:33] [Server thread/INFO]: Changing view distance to 12, from 10
+[16:11:33] [Server thread/INFO]: Player415[local:E:76b6cb59] logged in with entity id 22 at (451.8160869452309, 76.0, 603.192254639901)
+[16:11:33] [Server thread/INFO]: Player415 joined the game
+[16:11:40] [Server thread/INFO]: Saving and pausing game...
+[16:11:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:11:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:11:40] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:11:43] [Server thread/INFO]: Stopping server
+[16:11:43] [Server thread/INFO]: Saving players
+[16:11:43] [Server thread/INFO]: Saving worlds
+[16:11:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:11:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:11:43] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:11:55] [Client thread/INFO]: Stopping!
+[16:11:55] [Client thread/INFO]: SoundSystem shutting down...
+[16:11:56] [Clien[16:11:56] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:11:58] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:11:58] [Client thread/ERROR]: Couldn't initialize twitch stream
+[16:11:58] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:11:58] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[16:11:58] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:11:58] [Thread-5/INFO]: OpenAL initialized.
+[16:11:59] [Sound Library Loader/INFO]: Sound engine started
+[16:11:59] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:12:02] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:12:02] [Server thread/INFO]: Generating keypair
+[16:12:03] [Server thread/INFO]: Preparing start region for level 0
+[16:12:03] [Server thread/INFO]: Changing view distance to 12, from 10
+[16:12:03] [Server thread/INFO]: Player17[local:E:9c68467d] logged in with entity id 22 at (463.13109878871313, 75.0, 591.1365610934581)
+[16:12:03] [Server thread/INFO]: Player17 joined the game
+[16:12:08] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAim has been enabled!
+[16:12:12] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAimNS has been enabled!
+[16:12:13] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAim has been dsiabled!
+[16:12:28] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PlayerEsp has been enabled!
+[16:12:50] [Server thread/INFO]: Player17 has just earned the achievement [Taking Inventory]
+[16:12:50] [Client thread/INFO]: [CHAT] Player17 has just earned the achievement [Taking Inventory]
+[16:12:54] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > FullBright has been enabled!
+[16:16:07] [Server thread/INFO]: Saving and pausing game...
+[16:16:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:16:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:16:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End

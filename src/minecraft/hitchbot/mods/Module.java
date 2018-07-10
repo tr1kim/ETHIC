@@ -1,6 +1,7 @@
 package hitchbot.mods;
 
 import hitchbot.main.Category;
+import hitchbot.main.Hitchbot;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.server.S02PacketChat;
 
@@ -22,8 +23,10 @@ public class Module {
 	public void toggle() {
 		toggled = !toggled;
 		if (toggled) {
+			Hitchbot.addChatMessage(this.getName() + " has been enabled!");
 			onEnable();
 		}else {
+			Hitchbot.addChatMessage(this.getName() + " has been dsiabled!");
 			onDisable();
 		}
 	}

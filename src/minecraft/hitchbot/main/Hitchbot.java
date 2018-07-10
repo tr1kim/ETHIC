@@ -10,6 +10,7 @@ import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
 import hitchbot.mods.SimpleFlight;
 import hitchbot.mods.ToggleSprint;
+import hitchbot.mods.Tracers;
 import hitchbot.mods.WarzAim;
 import hitchbot.mods.WarzAimNS;
 import net.minecraft.client.Minecraft;
@@ -53,6 +54,7 @@ public class Hitchbot {
 		addMod(new AutoSteak());
 		addMod(new WarzAimNS());
 		addMod(new FullBright());
+		addMod(new Tracers());
 	}
 	
 	public static void addFriend(String n) {
@@ -120,7 +122,7 @@ public class Hitchbot {
 		return true;
 	}
 	public static void addChatMessage(String s) {
-		Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("[HITCHBOT] > " + s));
+		Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("[\2475ETHIC\247f] > " + s));
 	}
 	
 	public static boolean onSendChatMessage(String s) {

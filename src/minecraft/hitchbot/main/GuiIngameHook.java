@@ -21,11 +21,11 @@ public class GuiIngameHook extends GuiIngame{
         this.mc.entityRenderer.setupOverlayRendering();
         GlStateManager.enableBlend();
         int count = 0;
-        mc.fontRendererObj.drawString("Active mods:", 2, 107, 0x00ff00);
+        mc.fontRendererObj.drawString("\2475\247lActive mods:", 5, 107, 0xffffff);
         for (Module m: Hitchbot.getModules()) {
         	if(m.isToggled())
         	{
-        		mc.fontRendererObj.drawString(m.getName(), 2, 117+(count*10), 0x00ff00);
+        		mc.fontRendererObj.drawString(m.getName(), 5, 117+(count*10), 0xffffff);
         		count++;
         	}
         }
@@ -43,8 +43,8 @@ public class GuiIngameHook extends GuiIngame{
     	return false;
     }
     public void drawTabGui() {
-    	drawRect(75, 8, 5, 18, 0xaf676c6e);
-    	mc.fontRendererObj.drawString("ETHIC v1.0", 9, 10, 0xff0000);
+    	drawRect(75, 5, 5, 25, 0xaf676c6e);
+    	mc.fontRendererObj.drawString("\2475\247lETHIC \247r v1.0", 9, 11, 0xffffffff);
     	
     	drawRect(75, 25, 5, 45, Hitchbot.tabManager.getCurrentTab() == 0 ? 0xaf0d0d0d : 0xaf676c6e);
     	mc.fontRendererObj.drawString("Render", 9, 31, 0xffffffff);
@@ -61,6 +61,8 @@ public class GuiIngameHook extends GuiIngame{
         	mc.fontRendererObj.drawString("Zoom", 85, 51, isEnabled("OptifineZoom") ? 0x0000ff00 : 0xffffffff);
     		drawRect(145, 65, 75, 85, Hitchbot.tabManager.getCurrentRenderMod()== 2 ? 0xaf0d0d0d : 0xaf676c6e);
         	mc.fontRendererObj.drawString("FullBright", 85, 71, isEnabled("FullBright") ? 0x0000ff00 : 0xffffffff);
+    		drawRect(145, 85, 75, 105, Hitchbot.tabManager.getCurrentRenderMod()== 3 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("Tracers", 85, 91, isEnabled("Tracers") ? 0x0000ff00 : 0xffffffff);
     	}
     	if (Hitchbot.tabManager.getTabs().get(1).isExpanded()) {
     		drawRect(145, 45, 75, 65, Hitchbot.tabManager.getCurrentMovementMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);

@@ -75,3 +75,34 @@
 [12:55:45] [Server thread/INFO]: Hitchens lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
 [12:55:45] [Server thread/INFO]: Hitchens left the game
 [12:55:45] [Client thread/INFO]: [CHAT] Hitchens left the game
+[13:03:37] [Client thread/INFO]: Stopping!
+[13:03:37] [Client thread/INFO]: SoundSystem shutting down...
+[13:03:37] [Server thread/INFO]: Stopping server
+[13:03:37] [Server thread/INFO]: Saving players
+[13:03:37] [Server thread/INFO]: Saving worlds
+[13:03:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:03:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:03:37] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:03:37] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+35] [Thread-5/INFO]: OpenAL initialized.
+[13:03:36] [Sound Library Loader/INFO]: Sound engine started
+[13:03:37] [Client thread/INFO]: Created: 512x512 textures-atlas
+[13:03:46] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[13:03:46] [Server thread/INFO]: Generating keypair
+[13:03:46] [Server thread/INFO]: Preparing start region for level 0
+[13:03:47] [Server thread/INFO]: Changing view distance to 12, from 10
+[13:03:47] [Server thread/INFO]: Player597[local:E:e94d72d9] logged in with entity id 24 at (285.6662129635762, 71.0, 472.3094827118844)
+[13:03:47] [Server thread/INFO]: Player597 joined the game
+[13:03:48] [Server thread/INFO]: Saving and pausing game...
+[13:03:48] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[13:03:48] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[13:03:48] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[13:03:50] [Client thread/INFO]: Using default channel type
+[13:03:50] [Client thread/INFO]: Started on 50270
+[13:03:50] [Client thread/INFO]: [CHAT] Local game hosted on port 50270
+[13:04:02] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
+[13:04:02] [Server thread/INFO]: Hitchens[/192.168.8.109:50323] logged in with entity id 913 at (288.6106131722229, 69.31319935513747, 478.5825315561433)
+[13:04:02] [Server thread/INFO]: Hitchens joined the game
+[13:04:02] [Client thread/INFO]: [CHAT] Hitchens joined the game
+[13:04:10] [Server thread/INFO]: Player597 has just earned the achievement [Taking Inventory]
+[13:04:10] [Client thread/INFO]: [CHAT] Player597 has just earned the achievement [Taking Inventory]

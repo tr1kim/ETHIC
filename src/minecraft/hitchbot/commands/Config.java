@@ -20,7 +20,7 @@ public class Config extends Command{
 
 	@Override
 	public String getSyntax() {
-		return "-config warzaim.range <range> (float) | warzaim.guns.add <itemid> (int) | warzaim.guns.del <itemid> (int) | warzaim.angle <angle> (float)";
+		return "-config warzaim.range <range> (float) | warzaim.guns.add <itemid> (int) | warzaim.guns.del <itemid> (int) | warzaim.angle <angle> (float) | -config list";
 	}
 
 	@Override
@@ -38,6 +38,16 @@ public class Config extends Command{
 		else if(args[0].equalsIgnoreCase("warzaim.angle")) {
 			Hitchbot.aimbotAngle= Float.valueOf(args[1]);
 			Hitchbot.addChatMessage("MaxAngleDif in WarzAim set to: " + args[1]);
+		}
+		else if (args[0].equalsIgnoreCase("list")) {
+			Hitchbot.addChatMessage("CONFIG:");
+			Hitchbot.addChatMessage("range: " + Hitchbot.aimbotRange);
+			Hitchbot.addChatMessage("angle: " + Hitchbot.aimbotAngle);
+			String g = "";
+			for (Integer s : Hitchbot.guns) {
+				g+=String.valueOf(s) + " ";
+			}
+			Hitchbot.addChatMessage("guns: " + g);
 		}
 	}
 

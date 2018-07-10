@@ -1,0 +1,18 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+
+public class Tracers extends Module{
+
+	public Tracers() {
+		super("Tracers", Keyboard.KEY_U, Category.RENDER);
+		
+		@Override
+		public void onRender() {
+			
+		}
+	}
+
+}

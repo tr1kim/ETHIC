@@ -13,6 +13,7 @@ import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
 import hitchbot.mods.SimpleFlight;
 import hitchbot.mods.ToggleSprint;
+import hitchbot.mods.Tracers;
 import hitchbot.mods.WarzAim;
 import hitchbot.mods.WarzAimNS;
 
@@ -39,6 +40,7 @@ public class tabManager {
 		renderMods.put(0, new PlayerEsp());
 		renderMods.put(1, new OptifineZoom());
 		renderMods.put(2, new FullBright());
+		renderMods.put(3, new Tracers());
 		
 		movementMods.put(0, new ToggleSprint());
 		movementMods.put(1, new SimpleFlight());
