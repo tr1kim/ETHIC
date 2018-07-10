@@ -172,10 +172,10 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            						
 		            					}
 		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
-		            					double ySpeed = e.posY - e.lastTickPosY-0.04;
+		            					double ySpeed = e.posY - e.lastTickPosY;
 		            					double posY = e.posY;
 		            					if (e.isAirBorne) {
-		            						posY=posY + ySpeed*mult  - 0.08*mult*mult;
+		            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
 		            					}
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
@@ -226,10 +226,10 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             						
             					}
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
-            					double ySpeed = ent.posY - ent.lastTickPosY-0.04;
+            					double ySpeed = ent.posY - ent.lastTickPosY;
             					double posY = ent.posY;
             					if (ent.isAirBorne) {
-            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
+            						posY=posY + ySpeed*mult*0.5  - 0.02*mult*mult;
             					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
