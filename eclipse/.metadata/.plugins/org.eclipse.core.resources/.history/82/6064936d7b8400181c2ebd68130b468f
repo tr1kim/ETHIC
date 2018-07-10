@@ -17,6 +17,7 @@ public class WarzAimNS extends Module{
 	public void onRender() {
 		if (this.isToggled()) {
 			if (Hitchbot.aimbotTimer<System.currentTimeMillis()-50) {
+				
 			}
 		}
 		super.onRender();

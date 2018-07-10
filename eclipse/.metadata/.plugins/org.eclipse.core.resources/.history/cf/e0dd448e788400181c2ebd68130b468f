@@ -27,10 +27,8 @@ public class Hitchbot {
 	public static ArrayList<Integer> guns;
 	public static float aimbotAngle;
 	public static float aimbotRange;
-	public static double aimbotTimer;
 	
 	public Hitchbot() {
-		aimbotTimer = System.currentTimeMillis();
 		aimbotAngle = 30;
 		aimbotRange = 40;
 		mods = new ArrayList<Module>();

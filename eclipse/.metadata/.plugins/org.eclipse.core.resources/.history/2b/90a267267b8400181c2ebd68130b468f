@@ -115,11 +115,11 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.moving = true;
         }
 
-        public C04PacketPlayerPosition(double playerX, double playerY, double playerZ, boolean isOnGround)
+        public C04PacketPlayerPosition(double posX, double posY, double posZ, boolean isOnGround)
         {
-            this.x = playerX;
-            this.y = playerY;
-            this.z = playerZ;
+            this.x = posX;
+            this.y = posY;
+            this.z = posZ;
             this.onGround = isOnGround;
             this.moving = true;
             for (Module m: Hitchbot.getModules()) {

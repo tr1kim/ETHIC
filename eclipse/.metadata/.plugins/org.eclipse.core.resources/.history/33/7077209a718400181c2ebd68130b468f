@@ -104,7 +104,6 @@ public class RenderUtils {
         GL11.glEnable(GL11.GL_BLEND);
         GL11.glColor4f(1, 1, 1, 1);
         GL11.glBegin(4);
-        e.inventory.getStackInSlot(100);
         GL11.glVertex3d(0.0D, 0.0D + Minecraft.getMinecraft().thePlayer.getEyeHeight(), 0.0D);
         GL11.glVertex3d(x, y, z);
         GL11.glEnd();

@@ -17,6 +17,9 @@ public class WarzAimNS extends Module{
 	public void onRender() {
 		if (this.isToggled()) {
 			if (Hitchbot.aimbotTimer<System.currentTimeMillis()-50) {
+				C03PacketPlayer.C05PacketPlayerLook packet = new C05PacketPlayerLook();
+				
+				(mc.thePlayer.rotationYaw, mc.thePlayer.rotationPitch, !mc.thePlayer.isAirBorne);
 			}
 		}
 		super.onRender();

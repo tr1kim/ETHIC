@@ -5,7 +5,6 @@ import org.lwjgl.input.Keyboard;
 import hitchbot.main.Category;
 import hitchbot.main.Hitchbot;
 import net.minecraft.network.play.client.C03PacketPlayer;
-import net.minecraft.network.play.client.C03PacketPlayer.C05PacketPlayerLook;
 
 public class WarzAimNS extends Module{
 
@@ -17,6 +16,7 @@ public class WarzAimNS extends Module{
 	public void onRender() {
 		if (this.isToggled()) {
 			if (Hitchbot.aimbotTimer<System.currentTimeMillis()-50) {
+				C03PacketPlayer.C05PacketPlayerPosLook (mc.thePlayer.rotationYaw, mc.thePlayer.rotationPitch, !mc.thePlayer.isAirBorne);
 			}
 		}
 		super.onRender();

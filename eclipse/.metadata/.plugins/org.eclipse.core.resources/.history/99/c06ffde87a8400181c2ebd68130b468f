@@ -115,111 +115,13 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.moving = true;
         }
 
-        public C04PacketPlayerPosition(double playerX, double playerY, double playerZ, boolean isOnGround)
+        public C04PacketPlayerPosition(double posX, double posY, double posZ, boolean isOnGround)
         {
-            this.x = playerX;
-            this.y = playerY;
-            this.z = playerZ;
+            this.x = posX;
+            this.y = posY;
+            this.z = posZ;
             this.onGround = isOnGround;
             this.moving = true;
-            for (Module m: Hitchbot.getModules()) {
-            	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
-            		if (m.isToggled() && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
-            			if (Mouse.isButtonDown(2) || m.getName().equalsIgnoreCase("WarzAimNS")) {
-            				Entity ent = null;
-
-            					float cls = Hitchbot.aimbotRange;
-	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
-	            			    for (Entity e : entities) {
-	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
-						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
-		            					try {
-		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
-		            					}catch(NullPointerException ex){
-		            						ex.printStackTrace();
-		            					}finally{
-		            						
-		            					}
-		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
-		            					double ySpeed = e.posY - e.lastTickPosY-0.04;
-		            					double posY = e.posY;
-		            					if (e.isAirBorne) {
-		            						posY=posY + ySpeed*mult  - 0.08*mult*mult;
-		            					}
-		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
-						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
-						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
-						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
-						    			double pitche = ((90-Minecraft.getMinecraft().thePlayer.rotationPitch) * Math.PI) / 180;
-						    			double currentyawe  = currentrotation1+90;
-						    			if (currentyawe < 0) {
-						    				currentyawe += 360;
-						    			}
-						    			if (currentyawe>360) {
-						    				currentyawe -=360;
-						    			}
-						    			double yawe = Math.atan2(e.posZ-Minecraft.getMinecraft().thePlayer.posZ,e.posX- Minecraft.getMinecraft().thePlayer.posX);
-						    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
-						    			double tene = 1;
-						    			yawe = yawe * 180 / Math.PI;
-		            			    	if (yawe < 0) {
-		            			    		yawe += 360;
-		            			    	}
-						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
-						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
-
-						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
-						    					ent = e;
-						    					Hitchbot.setLastTarget(e.getName());
-		                						if (e.getName().equals(Hitchbot.getLastTarget())) {
-		                							ent = e;
-							    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
-							    					if (cls < 6) {
-							    						cls = 0.1F;
-							    					}else {
-							    						cls = (float) (cls / 1.7);
-							    					}
-		                						}
-						    				}
-						    			}
-						    			
-		            			    }
-            				}
-            				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
-            					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
-            					}catch(NullPointerException e){
-            						e.printStackTrace();
-            					}finally{
-            						
-            					}
-            					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
-            					double ySpeed = ent.posY - ent.lastTickPosY-0.04;
-            					double posY = ent.posY;
-            					if (ent.isAirBorne) {
-            						posY=posY + ySpeed*mult  - 0.04*mult*mult;
-            					}
-            					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
-				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
-				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
-				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
-				    			double yawe = Math.atan2(posZ-Minecraft.getMinecraft().thePlayer.posZ,posX- Minecraft.getMinecraft().thePlayer.posX);
-				    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
-				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
-				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
-				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
-				    				Hitchbot.setLastTarget("None");
-				    			}
-            				}
-            			}else {
-            				Hitchbot.setLastTarget("None");
-            			}
-            		}
-            	}
-            }
-            this.rotating = true;
         }
 
         public void readPacketData(PacketBuffer buf) throws IOException
