@@ -196,7 +196,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= 30)&&(currentyawe-yawe>= -30)) || ((currentyawe-yawe<= 390)&&(currentyawe-yawe>= 330)) || ((currentyawe-yawe>= -390)&&(currentyawe-yawe<= -330))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+						    			if ((((currentyawe-yawe<= 20)&&(currentyawe-yawe>= -20)) || ((currentyawe-yawe<= 380)&&(currentyawe-yawe>= 340)) || ((currentyawe-yawe>= -380)&&(currentyawe-yawe<= -340))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -327,7 +327,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= 30)&&(currentyawe-yawe>= -30)) || ((currentyawe-yawe<= 390)&&(currentyawe-yawe>= 330)) || ((currentyawe-yawe>= -390)&&(currentyawe-yawe<= -330))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+						    			if ((((currentyawe-yawe<= 20)&&(currentyawe-yawe>= -20)) || ((currentyawe-yawe<= 380)&&(currentyawe-yawe>= 340)) || ((currentyawe-yawe>= -380)&&(currentyawe-yawe<= -340))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
