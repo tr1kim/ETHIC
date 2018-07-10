@@ -1,0 +1,28 @@
+package hitchbot.commands;
+
+import hitchbot.command.Command;
+
+public class Config extends Command{
+
+	@Override
+	public String getAlias() {
+		return "config";
+	}
+
+	@Override
+	public String getDescription() {
+		return "set config values for a number of modules";
+	}
+
+	@Override
+	public String getSyntax() {
+		return "-config aimbot.range <range> | aimbot.guns.add <itemid> | aimbot.guns.del <itemid>";
+	}
+
+	@Override
+	public void onCommand(String command, String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

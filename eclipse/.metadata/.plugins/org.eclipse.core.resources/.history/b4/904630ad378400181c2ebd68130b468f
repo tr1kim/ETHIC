@@ -3,7 +3,6 @@ package hitchbot.command;
 import java.util.ArrayList;
 
 import hitchbot.commands.Bind;
-import hitchbot.commands.Config;
 import hitchbot.commands.Friend;
 import hitchbot.main.Hitchbot;
 
@@ -15,7 +14,6 @@ public class CommandManager {
 		commands = new ArrayList();
 		addCommand(new Bind());
 		addCommand(new Friend());
-		addCommand(new Config());
 	}
 	
 	public void addCommand(Command c) {

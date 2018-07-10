@@ -24,12 +24,8 @@ public class Hitchbot {
 	private static String lastTarget = "None";
 	public static hitchbot.tabGui.tabManager tabManager;
 	public static ArrayList<Integer> guns;
-	public static float aimbotAngle;
-	public static float aimbotRange;
 	
 	public Hitchbot() {
-		aimbotAngle = 30;
-		aimbotRange = 40;
 		mods = new ArrayList<Module>();
 		cmdManager = new CommandManager();
 		friends = new ArrayList<String>();

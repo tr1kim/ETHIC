@@ -1,0 +1,5 @@
+package hitchbot.commands;
+
+public class Config {
+
+}
