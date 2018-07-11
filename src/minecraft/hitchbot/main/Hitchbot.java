@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import hitchbot.command.CommandManager;
 import hitchbot.mods.AutoSteak;
+import hitchbot.mods.ChestEsp;
 import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
 import hitchbot.mods.OptifineZoom;
@@ -57,6 +58,7 @@ public class Hitchbot {
 		addMod(new WarzAimNS());
 		addMod(new FullBright());
 		addMod(new Tracers());
+		addMod(new ChestEsp());
 	}
 	
 	public static void addFriend(String n) {

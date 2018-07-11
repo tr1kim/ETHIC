@@ -1,5 +1,7 @@
 package net.minecraft.client.renderer.entity;
 
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -75,6 +77,7 @@ public abstract class RenderLiving<T extends EntityLiving> extends RendererLivin
 
         if (entity != null)
         {
+        	
             y = y - (1.6D - (double)entityLivingIn.height) * 0.5D;
             Tessellator tessellator = Tessellator.getInstance();
             WorldRenderer worldrenderer = tessellator.getWorldRenderer();

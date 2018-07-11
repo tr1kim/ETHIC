@@ -1,0 +1,53 @@
+[01:19:03] [Client thread/INFO]: Setting user: Player543
+[01:19:03] [Client thread/INFO]: (Session ID is token:0:Player543)
+[01:19:05] [Client thread/INFO]: LWJGL Version: 2.9.4
+[01:19:07] [Client thread/INFO]: Reloading ResourceManager: Default
+[01:19:07] [Client thread/ERROR]: Couldn't initialize twitch stream
+[01:19:07] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[01:19:07] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[01:19:07] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[01:19:08] [Thread-6/INFO]: OpenAL initialized.
+[01:19:08] [Sound Library Loader/INFO]: Sound engine started
+[01:19:09] [Client thread/INFO]: Created: 512x512 textures-atlas
+[01:19:12] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[01:19:12] [Server thread/INFO]: Generating keypair
+[01:19:12] [Server thread/INFO]: Preparing start region for level 0
+[01:19:13] [Server thread/INFO]: Changing view distance to 12, from 10
+[01:19:13] [Server thread/INFO]: Player543[local:E:9a5b184e] logged in with entity id 22 at (257.8395032749244, 69.0, 504.06252505429893)
+[01:19:13] [Server thread/INFO]: Player543 joined the game
+[01:19:21] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > ChestEsp has been enabled!
+[01:19:33] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[01:19:44] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[01:19:45] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[01:19:45] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[01:19:47] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > flight has been enabled!
+[01:19:47] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > flight has been dsiabled!
+[01:19:55] [Server thread/INFO]: Player543 has just earned the achievement [Taking Inventory]
+[01:19:55] [Client thread/INFO]: [CHAT] Player543 has just earned the achievement [Taking Inventory]
+[01:20:25] [Client thread/INFO]: Stopping!
+[01:20:25] [Client thread/INFO]: SoundSystem shutting down...
+[01:20:25] [Server [01:20:27] [Client thread/INFO]: LWJGL Version: 2.9.4
+[01:20:28] [Client thread/INFO]: Reloading ResourceManager: Default
+[01:20:29] [Client thread/ERROR]: Couldn't initialize twitch stream
+[01:20:29] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[01:20:29] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[01:20:29] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[01:20:29] [Thread-5/INFO]: OpenAL initialized.
+[01:20:29] [Sound Library Loader/INFO]: Sound engine started
+[01:20:30] [Client thread/INFO]: Created: 512x512 textures-atlas
+[01:20:47] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[01:20:47] [Server thread/INFO]: Generating keypair
+[01:20:47] [Server thread/INFO]: Preparing start region for level 0
+[01:20:47] [Server thread/INFO]: Changing view distance to 12, from 10
+[01:20:47] [Server thread/INFO]: Player615[local:E:5083e096] logged in with entity id 22 at (258.76249998807907, 69.0, 501.61099316531147)
+[01:20:47] [Server thread/INFO]: Player615 joined the game
+[01:20:50] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > ChestEsp has been enabled!
+[01:20:55] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[01:20:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[01:20:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[01:20:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[01:21:21] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[01:21:23] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[01:21:23] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
+[01:21:27] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been dsiabled!
+[01:21:33] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!

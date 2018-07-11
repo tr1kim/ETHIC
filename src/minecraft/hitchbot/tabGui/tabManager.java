@@ -7,6 +7,7 @@ import org.lwjgl.input.Keyboard;
 
 import hitchbot.main.Hitchbot;
 import hitchbot.mods.AutoSteak;
+import hitchbot.mods.ChestEsp;
 import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
 import hitchbot.mods.OptifineZoom;
@@ -41,6 +42,7 @@ public class tabManager {
 		renderMods.put(1, new OptifineZoom());
 		renderMods.put(2, new FullBright());
 		renderMods.put(3, new Tracers());
+		renderMods.put(4, new ChestEsp());
 		
 		movementMods.put(0, new ToggleSprint());
 		movementMods.put(1, new SimpleFlight());

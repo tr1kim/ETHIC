@@ -6,6 +6,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.AxisAlignedBB;
 
 public class RenderUtils {
@@ -89,5 +91,28 @@ public class RenderUtils {
         GL11.glDisable(GL11.GL_BLEND);
         // GL11.glEnable(GL11.GL_LIGHTING);
         GL11.glPopMatrix();
+	}
+	public static void chestESPBox(TileEntityChest entity)
+	{
+		GL11.glBlendFunc(770, 771);
+		GL11.glEnable(GL11.GL_BLEND);
+		GL11.glLineWidth(4.0F);
+		GL11.glDisable(GL11.GL_TEXTURE_2D);
+		GL11.glDisable(GL11.GL_DEPTH_TEST);
+		GL11.glDepthMask(false);
+		GL11.glColor4d(1F, 0.5F, 0.5F, 0.5F);
+		 Minecraft.getMinecraft().getRenderManager();
+		RenderGlobal.func_181561_a(
+			new AxisAlignedBB(
+entity.getPos().getX()-Minecraft.getMinecraft().thePlayer.posX+0.1,
+entity.getPos().getY()-Minecraft.getMinecraft().thePlayer.posY+0.1,
+entity.getPos().getZ()-Minecraft.getMinecraft().thePlayer.posZ+0.1,
+entity.getPos().getX()-Minecraft.getMinecraft().thePlayer.posX+0.9,
+entity.getPos().getY()-Minecraft.getMinecraft().thePlayer.posY+0.9,
+entity.getPos().getZ()-Minecraft.getMinecraft().thePlayer.posZ+0.9));
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
+		GL11.glEnable(GL11.GL_DEPTH_TEST);
+		GL11.glDepthMask(true);
+		GL11.glDisable(GL11.GL_BLEND);
 	}
 }
