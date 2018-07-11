@@ -10,6 +10,7 @@ import hitchbot.mods.AutoSteak;
 import hitchbot.mods.ChestEsp;
 import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
+import hitchbot.mods.NameTags;
 import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
 import hitchbot.mods.SimpleFlight;
@@ -43,6 +44,7 @@ public class tabManager {
 		renderMods.put(2, new FullBright());
 		renderMods.put(3, new Tracers());
 		renderMods.put(4, new ChestEsp());
+		renderMods.put(5, new NameTags());
 		
 		movementMods.put(0, new ToggleSprint());
 		movementMods.put(1, new SimpleFlight());

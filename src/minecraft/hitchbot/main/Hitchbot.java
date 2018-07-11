@@ -7,6 +7,7 @@ import hitchbot.mods.AutoSteak;
 import hitchbot.mods.ChestEsp;
 import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
+import hitchbot.mods.NameTags;
 import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
 import hitchbot.mods.SimpleFlight;
@@ -59,6 +60,7 @@ public class Hitchbot {
 		addMod(new FullBright());
 		addMod(new Tracers());
 		addMod(new ChestEsp());
+		addMod(new NameTags());
 	}
 	
 	public static void addFriend(String n) {

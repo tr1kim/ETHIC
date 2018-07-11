@@ -1,6 +1,10 @@
 package net.minecraft.client.renderer.entity;
 
 import com.google.common.collect.Lists;
+
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
+
 import java.nio.FloatBuffer;
 import java.util.List;
 import net.minecraft.client.Minecraft;
@@ -500,7 +504,11 @@ public abstract class RendererLivingEntity<T extends EntityLivingBase> extends R
         {
             double d0 = entity.getDistanceSqToEntity(this.renderManager.livingPlayer);
             float f = entity.isSneaking() ? 32.0F : 64.0F;
-
+        	for (Module m: Hitchbot.getModules()) {
+        		if (m.isToggled() && m.getName().equalsIgnoreCase("NameTags")) {
+        			f = 100.0F;
+        		}	
+        	}
             if (d0 < (double)(f * f))
             {
                 String s = entity.getDisplayName().getFormattedText();
@@ -509,6 +517,13 @@ public abstract class RendererLivingEntity<T extends EntityLivingBase> extends R
 
                 if (entity.isSneaking())
                 {
+                	for (Module m: Hitchbot.getModules()) {
+                		if (m.isToggled() && m.getName().equalsIgnoreCase("NameTags")) {
+                            this.renderOffsetLivingLabel(entity, x, y - (entity.isChild() ? (double)(entity.height / 2.0F) : 0.0D), z, s, 0.02666667F, d0);
+                            return;
+                		}
+                	}
+
                     FontRenderer fontrenderer = this.getFontRendererFromRenderManager();
                     GlStateManager.pushMatrix();
                     GlStateManager.translate((float)x, (float)y + entity.height + 0.5F - (entity.isChild() ? entity.height / 2.0F : 0.0F), (float)z);

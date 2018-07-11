@@ -20,6 +20,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
+
 public abstract class Render<T extends Entity>
 {
     private static final ResourceLocation shadowTextures = new ResourceLocation("textures/misc/shadow.png");
@@ -333,7 +336,16 @@ public abstract class Render<T extends Entity>
      * Renders an entity's name above its head
      */
     protected void renderLivingLabel(T entityIn, String str, double x, double y, double z, int maxDistance)
-    {
+    {   
+    	for (Module m: Hitchbot.getModules()) {
+			if (m.isToggled() && m.getName().equalsIgnoreCase("NameTags")) {
+		    	double dist = Math.sqrt(Math.sqrt(x*x+y*y)*Math.sqrt(x*x+y*y)+z*z);
+		    	x = x/Math.sqrt(dist)*2;
+		    	y = y/Math.sqrt(dist)*2;
+		    	z = z/Math.sqrt(dist)*2;
+			}
+		}
+    	
         double d0 = entityIn.getDistanceSqToEntity(this.renderManager.livingPlayer);
 
         if (d0 <= (double)(maxDistance * maxDistance))
