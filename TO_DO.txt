@@ -1,0 +1,5 @@
+TO-DO:
+
+HITCH - Fix autoSteak
+HITCH - Add module A1.14
+ETHAN - Add hotkey for toggling gui visibility

@@ -15,7 +15,6 @@ public class rayTrace {
 		double ydif = y2-y1;
 		double zdif = z2-z1;
 		double distpre = Math.sqrt(xdif*xdif+ydif*ydif);
-
 		double dist = Math.sqrt(distpre*distpre+zdif*zdif); 
 		List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 		int counter = 0;
