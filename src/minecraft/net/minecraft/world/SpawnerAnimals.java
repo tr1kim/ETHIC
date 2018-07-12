@@ -75,7 +75,6 @@ public final class SpawnerAnimals
                 {
                     int j4 = p_77192_1_.countEntities(enumcreaturetype.getCreatureClass());
                     int k4 = enumcreaturetype.getMaxNumberOfCreature() * i / MOB_COUNT_DIV;
-
                     if (j4 <= k4)
                     {
                         label374:
@@ -209,6 +208,7 @@ public final class SpawnerAnimals
                 }
             }
         }
+        
     }
 
     /**
@@ -220,7 +220,7 @@ public final class SpawnerAnimals
 
         if (!list.isEmpty())
         {
-            while (p_77191_6_.nextFloat() < p_77191_1_.getSpawningChance())
+            while (p_77191_6_.nextFloat() < p_77191_1_.getSpawningChance() )
             {
                 BiomeGenBase.SpawnListEntry biomegenbase$spawnlistentry = (BiomeGenBase.SpawnListEntry)WeightedRandom.getRandomItem(worldIn.rand, list);
                 int i = biomegenbase$spawnlistentry.minGroupCount + p_77191_6_.nextInt(1 + biomegenbase$spawnlistentry.maxGroupCount - biomegenbase$spawnlistentry.minGroupCount);

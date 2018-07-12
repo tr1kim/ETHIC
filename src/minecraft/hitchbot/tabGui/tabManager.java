@@ -13,7 +13,7 @@ import hitchbot.mods.Module;
 import hitchbot.mods.NameTags;
 import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
-import hitchbot.mods.SimpleFlight;
+import hitchbot.mods.LongJump;
 import hitchbot.mods.ToggleSprint;
 import hitchbot.mods.Tracers;
 import hitchbot.mods.WarzAim;
@@ -49,7 +49,7 @@ public class tabManager {
 		renderMods.put(6, new Xray());
 		
 		movementMods.put(0, new ToggleSprint());
-		movementMods.put(1, new SimpleFlight());
+		movementMods.put(1, new LongJump());
 		
 		combatMods.put(0, new WarzAim());
 		combatMods.put(1, new AutoSteak());

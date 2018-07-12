@@ -1,0 +1,30 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.passive.EntityVillager;
+
+public class FullBright extends Module {
+
+	public FullBright() {
+		super("FullBright", Keyboard.KEY_O, Category.RENDER);
+	}
+
+	@Override
+	public void onUpdate() {
+		if (this.isToggled()) {
+			mc.gameSettings.gammaSetting = 100F;
+		}else {
+			mc.gameSettings.gammaSetting = 0F;
+		}
+		for (Entity ent : Minecraft.getMinecraft().theWorld.getLoadedEntityList()) {
+			if (ent instanceof EntityVillager) {
+				Minecraft.getMinecraft().theWorld.removeEntity(ent);
+			}
+		}
+		super.onUpdate();
+	}
+}

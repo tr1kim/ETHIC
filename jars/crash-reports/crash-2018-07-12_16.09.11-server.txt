@@ -1,0 +1,91 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 7/12/18 4:09 PM
+Description: Exception preparing structure feature
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.world.gen.structure.MapGenVillage.canSpawnStructureAtCoords(MapGenVillage.java:71)
+	at net.minecraft.world.gen.structure.MapGenStructure.recursiveGenerate(MapGenStructure.java:40)
+	at net.minecraft.world.gen.MapGenBase.generate(MapGenBase.java:34)
+	at net.minecraft.world.gen.ChunkProviderGenerate.provideChunk(ChunkProviderGenerate.java:224)
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:121)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:151)
+	at net.minecraft.world.World.getChunkFromChunkCoords(World.java:337)
+	at net.minecraft.world.SpawnerAnimals.getRandomChunkPosition(SpawnerAnimals.java:173)
+	at net.minecraft.world.SpawnerAnimals.findChunksForSpawning(SpawnerAnimals.java:84)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:192)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:764)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:685)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:178)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:564)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.world.gen.structure.MapGenVillage.canSpawnStructureAtCoords(MapGenVillage.java:71)
+
+-- Feature being prepared --
+Details:
+	Is feature chunk: ~~ERROR~~ IllegalArgumentException: bound must be positive
+	Chunk location: -8,-9
+	Chunk pos hash: -34359738376
+	Structure type: net.minecraft.world.gen.structure.MapGenVillage
+Stacktrace:
+	at net.minecraft.world.gen.structure.MapGenStructure.recursiveGenerate(MapGenStructure.java:40)
+	at net.minecraft.world.gen.MapGenBase.generate(MapGenBase.java:34)
+	at net.minecraft.world.gen.ChunkProviderGenerate.provideChunk(ChunkProviderGenerate.java:224)
+
+-- Chunk to be generated --
+Details:
+	Location: 0,-1
+	Position hash: -4294967296
+	Generator: RandomLevelSource
+Stacktrace:
+	at net.minecraft.world.gen.ChunkProviderServer.loadChunk(ChunkProviderServer.java:121)
+	at net.minecraft.world.gen.ChunkProviderServer.provideChunk(ChunkProviderServer.java:151)
+	at net.minecraft.world.World.getChunkFromChunkCoords(World.java:337)
+	at net.minecraft.world.SpawnerAnimals.getRandomChunkPosition(SpawnerAnimals.java:173)
+	at net.minecraft.world.SpawnerAnimals.findChunksForSpawning(SpawnerAnimals.java:84)
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:192)
+
+-- Affected level --
+Details:
+	Level name: mcpworld
+	All players: 1 total; [EntityPlayerMP['Player364'/1569, l='mcpworld', x=100.50, y=300.00, z=100.50]]
+	Chunk stats: ServerChunkCache: 703 Drop: 0
+	Level seed: -1587754402
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 765070 game time, 1380 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 65932 (now: false), thunder time: 56768 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:764)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:685)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:178)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:564)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_161, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 811973632 bytes (774 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 98
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player364'/1569, l='mcpworld', x=100.50, y=300.00, z=100.50]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

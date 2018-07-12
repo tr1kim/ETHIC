@@ -3,6 +3,9 @@ package hitchbot.mods;
 import org.lwjgl.input.Keyboard;
 
 import hitchbot.main.Category;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.passive.EntityVillager;
 
 public class FullBright extends Module {
 
@@ -17,6 +20,7 @@ public class FullBright extends Module {
 		}else {
 			mc.gameSettings.gammaSetting = 0F;
 		}
+		
 		super.onUpdate();
 	}
 }

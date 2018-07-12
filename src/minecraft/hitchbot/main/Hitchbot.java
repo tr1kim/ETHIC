@@ -10,7 +10,7 @@ import hitchbot.mods.Module;
 import hitchbot.mods.NameTags;
 import hitchbot.mods.OptifineZoom;
 import hitchbot.mods.PlayerEsp;
-import hitchbot.mods.SimpleFlight;
+import hitchbot.mods.LongJump;
 import hitchbot.mods.ToggleSprint;
 import hitchbot.mods.Tracers;
 import hitchbot.mods.WarzAim;
@@ -51,7 +51,7 @@ public class Hitchbot {
 		guns.add(292); //sawed
 		guns.add(256); //mauser
 		guns.add(257); //m10
-		addMod(new SimpleFlight());
+		addMod(new LongJump());
 		addMod(new WarzAim());
 		addMod(new ToggleSprint());
 		addMod(new PlayerEsp());

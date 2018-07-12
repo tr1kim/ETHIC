@@ -107,8 +107,8 @@ public class RenderUtils {
 entity.getPos().getX()-Minecraft.getMinecraft().thePlayer.posX+0.1,
 entity.getPos().getY()-Minecraft.getMinecraft().thePlayer.posY+0.1,
 entity.getPos().getZ()-Minecraft.getMinecraft().thePlayer.posZ+0.1,
-entity.getPos().getX()-Minecraft.getMinecraft().thePlayer.posX+0.9,
-entity.getPos().getY()-Minecraft.getMinecraft().thePlayer.posY+0.9,
+entity.getPos().getX() -Minecraft.getMinecraft().thePlayer.posX+0.9,
+entity.getPos().getY() -Minecraft.getMinecraft().thePlayer.posY+0.9,
 entity.getPos().getZ()-Minecraft.getMinecraft().thePlayer.posZ+0.9));
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		GL11.glEnable(GL11.GL_DEPTH_TEST);

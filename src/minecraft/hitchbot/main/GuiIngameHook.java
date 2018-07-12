@@ -74,7 +74,7 @@ public class GuiIngameHook extends GuiIngame{
     		drawRect(145, 45, 75, 65, Hitchbot.tabManager.getCurrentMovementMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);
         	mc.fontRendererObj.drawString("Sprint", 85, 51, isEnabled("ToggleSprint") ? 0x0000ff00 : 0xffffffff);
     		drawRect(145, 65, 75, 85, Hitchbot.tabManager.getCurrentMovementMod()== 1 ? 0xaf0d0d0d : 0xaf676c6e);
-        	mc.fontRendererObj.drawString("Fly", 85, 71, isEnabled("SimpleFlight") ? 0x0000ff00 : 0xffffffff);
+        	mc.fontRendererObj.drawString("LJump", 85, 71, isEnabled("LongJump") ? 0x0000ff00 : 0xffffffff);
     	}
     	if (Hitchbot.tabManager.getTabs().get(2).isExpanded()) {
     		drawRect(145, 65, 75, 85, Hitchbot.tabManager.getCurrentCombatMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);

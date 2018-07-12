@@ -1,0 +1,30 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+
+public class LongJump extends Module {
+
+	public static float flyHackSpeed = 0.2F;
+	
+	
+	public LongJump() {
+		super("flight", Keyboard.KEY_F, Category.PLAYER);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public void onDisable() {
+		mc.thePlayer.capabilities.isFlying = false;
+		super.onDisable();
+	}
+	
+	public void onUpdate() {
+		if (this.isToggled()) {
+		if (mc.gameSettings.keyBindJump.isPressed()) {
+			mc.thePlayer.motionX += 0.05;
+		}
+		super.onUpdate();
+	}
+}

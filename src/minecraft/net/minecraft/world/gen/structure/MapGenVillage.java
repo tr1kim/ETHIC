@@ -49,8 +49,10 @@ public class MapGenVillage extends MapGenStructure
 
     protected boolean canSpawnStructureAtCoords(int chunkX, int chunkZ)
     {
+
         int i = chunkX;
         int j = chunkZ;
+        boolean flag = this.worldObj.getWorldChunkManager().areBiomesViable(i * 16 + 8, j * 16 + 8, 0, villageSpawnBiomes);
 
         if (chunkX < 0)
         {
@@ -70,9 +72,15 @@ public class MapGenVillage extends MapGenStructure
         k = k + random.nextInt(this.field_82665_g - this.field_82666_h);
         l = l + random.nextInt(this.field_82665_g - this.field_82666_h);
 
-        if (i == k && j == l)
+        Random rand1 = new Random();
+        //100, genererade snabbare, fortfarande för mycke
+        //10000, typ bra, men itne tilräckligt tätt
+        //1000 ok 
+        
+        //hitchbot
+        if ((i == k && j == l)||  rand1.nextInt(500) == 1)
         {
-            boolean flag = this.worldObj.getWorldChunkManager().areBiomesViable(i * 16 + 8, j * 16 + 8, 0, villageSpawnBiomes);
+            flag = this.worldObj.getWorldChunkManager().areBiomesViable(i * 16 + 8, j * 16 + 8, 0, villageSpawnBiomes);
 
             if (flag)
             {

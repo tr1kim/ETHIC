@@ -145,11 +145,28 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
 		            					double ySpeed = e.posY - e.lastTickPosY-0.04;
 		            					double posY = e.posY;
-		            					if (!e.onGround) {
-		            						posY-=0.8;
-		            						//posY=posY + ySpeed*mult  - 0.04*mult*mult;
-		            					}
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
+		            					double xspeed = (e.posX - e.lastTickPosX);
+		            					double zspeed = (e.posZ - e.lastTickPosZ);
+		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+		            					boolean grappling = xyspeed > 0.3333 ? true : false;
+		            					boolean hitground = false;
+
+		            					if (!e.onGround) {
+			            					for (int i = 0; i<Math.floor(mult); i++) {
+			            						if (grappling && hitground) break;
+			            						posX += xspeed;
+			            						posZ += zspeed;
+			            						if (!hitground) {
+			            							xspeed = xspeed *0.98;
+			            							zspeed = zspeed *0.98;
+			            							posY += ySpeed + -0.08*(i+1);
+			            						}
+			            						if (rayTrace.inblock(posX, posY, posZ)) {
+			            							hitground = true;
+			            						}
+			            					}
+		            					}
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -189,22 +206,39 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    }
             				}
             				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
             						
             					}
+            					float t = ent.fallDistance;
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
-            					double ySpeed = ent.posY - ent.lastTickPosY-0.4;
+            					double ySpeed = ent.posY - ent.lastTickPosY-0.04;
             					double posY = ent.posY;
-            					if (!ent.onGround) {
-            						posY-=0.75;
-            						//posY=posY + ySpeed*mult  - 0.04*mult*mult;
-            					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
+            					double xspeed = (ent.posX - ent.lastTickPosX);
+            					double zspeed = (ent.posZ - ent.lastTickPosZ);
+            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+            					boolean grappling = xyspeed > 0.3333 ? true : false;
+            					boolean hitground = false;
+            					if (!ent.onGround) {
+	            					for (int i = 0; i<Math.floor(mult); i++) {
+	            						if (grappling && hitground) break;
+	            						posX += xspeed;
+	            						posZ += zspeed;
+	            						if (!hitground) {
+	            							xspeed = xspeed *0.98;
+	            							zspeed = zspeed *0.98;
+	            							posY += ySpeed + -0.08*i;
+	            						}
+	            						if (rayTrace.inblock(posX, posY, posZ)) {
+	            							hitground = true;
+	            						}
+	            					}
+            					}
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -212,6 +246,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
+				                this.rotating = true;
 				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 				    				Hitchbot.setLastTarget("None");
 				    			}
@@ -222,7 +257,6 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             		}
             	}
             }
-            this.rotating = true;
         }
 
         public void readPacketData(PacketBuffer buf) throws IOException
@@ -276,11 +310,28 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
 		            					double ySpeed = e.posY - e.lastTickPosY-0.04;
 		            					double posY = e.posY;
-		            					if (!e.onGround) {
-		            						posY-=0.8;
-		            						//posY=posY + ySpeed*mult  - 0.04*mult*mult;
-		            					}
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
+		            					double xspeed = (e.posX - e.lastTickPosX);
+		            					double zspeed = (e.posZ - e.lastTickPosZ);
+		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+		            					boolean grappling = xyspeed > 0.3333 ? true : false;
+		            					boolean hitground = false;
+
+		            					if (!e.onGround) {
+			            					for (int i = 0; i<Math.floor(mult); i++) {
+			            						if (grappling && hitground) break;
+			            						posX += xspeed;
+			            						posZ += zspeed;
+			            						if (!hitground) {
+			            							xspeed = xspeed *0.98;
+			            							zspeed = zspeed *0.98;
+			            							posY += ySpeed + -0.08*(i+1);
+			            						}
+			            						if (rayTrace.inblock(posX, posY, posZ)) {
+			            							hitground = true;
+			            						}
+			            					}
+		            					}
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -320,22 +371,39 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    }
             				}
             				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
             						
             					}
+            					float t = ent.fallDistance;
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
-            					double ySpeed = ent.posY - ent.lastTickPosY-0.4;
+            					double ySpeed = ent.posY - ent.lastTickPosY-0.04;
             					double posY = ent.posY;
-            					if (!ent.onGround) {
-            						posY-=0.75;
-            						//posY=posY + ySpeed*mult  - 0.04*mult*mult;
-            					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
+            					double xspeed = (ent.posX - ent.lastTickPosX);
+            					double zspeed = (ent.posZ - ent.lastTickPosZ);
+            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+            					boolean grappling = xyspeed > 0.3333 ? true : false;
+            					boolean hitground = false;
+            					if (!ent.onGround) {
+	            					for (int i = 0; i<Math.floor(mult); i++) {
+	            						if (grappling && hitground) break;
+	            						posX += xspeed;
+	            						posZ += zspeed;
+	            						if (!hitground) {
+	            							xspeed = xspeed *0.98;
+	            							zspeed = zspeed *0.98;
+	            							posY += ySpeed + -0.08*i;
+	            						}
+	            						if (rayTrace.inblock(posX, posY, posZ)) {
+	            							hitground = true;
+	            						}
+	            					}
+            					}
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -343,6 +411,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
+				                this.rotating = true;
 				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 				    				Hitchbot.setLastTarget("None");
 				    			}
@@ -410,11 +479,28 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double posX = e.posX + (e.posX - e.lastTickPosX)*mult;
 		            					double ySpeed = e.posY - e.lastTickPosY-0.04;
 		            					double posY = e.posY;
-		            					if (!e.onGround) {
-		            						posY-=0.8;
-		            						//posY=posY + ySpeed*mult  - 0.04*mult*mult;
-		            					}
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
+		            					double xspeed = (e.posX - e.lastTickPosX);
+		            					double zspeed = (e.posZ - e.lastTickPosZ);
+		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+		            					boolean grappling = xyspeed > 0.3333 ? true : false;
+		            					boolean hitground = false;
+
+		            					if (!e.onGround) {
+			            					for (int i = 0; i<Math.floor(mult); i++) {
+			            						if (grappling && hitground) break;
+			            						posX += xspeed;
+			            						posZ += zspeed;
+			            						if (!hitground) {
+			            							xspeed = xspeed *0.98;
+			            							zspeed = zspeed *0.98;
+			            							posY += ySpeed + -0.08*(i+1);
+			            						}
+			            						if (rayTrace.inblock(posX, posY, posZ)) {
+			            							hitground = true;
+			            						}
+			            					}
+		            					}
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -454,22 +540,39 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    }
             				}
             				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/4.5;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
             						
             					}
+            					float t = ent.fallDistance;
             					double posX = ent.posX + (ent.posX - ent.lastTickPosX)*mult;
-            					double ySpeed = ent.posY - ent.lastTickPosY-0.4;
+            					double ySpeed = ent.posY - ent.lastTickPosY-0.04;
             					double posY = ent.posY;
-            					if (!ent.onGround) {
-            						posY-=0.75;
-            						//posY=posY + ySpeed*mult  - 0.04*mult*mult;
-            					}
             					double posZ = ent.posZ + (ent.posZ - ent.lastTickPosZ)*mult;
+            					double xspeed = (ent.posX - ent.lastTickPosX);
+            					double zspeed = (ent.posZ - ent.lastTickPosZ);
+            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+            					boolean grappling = xyspeed > 0.3333 ? true : false;
+            					boolean hitground = false;
+            					if (!ent.onGround) {
+	            					for (int i = 0; i<Math.floor(mult); i++) {
+	            						if (grappling && hitground) break;
+	            						posX += xspeed;
+	            						posZ += zspeed;
+	            						if (!hitground) {
+	            							xspeed = xspeed *0.98;
+	            							zspeed = zspeed *0.98;
+	            							posY += ySpeed + -0.08*i;
+	            						}
+	            						if (rayTrace.inblock(posX, posY, posZ)) {
+	            							hitground = true;
+	            						}
+	            					}
+            					}
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -477,6 +580,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			double pitchdife = Math.atan2(Math.sqrt(Z * Z + X * X), Y);
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
+				                this.rotating = true;
 				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 				    				Hitchbot.setLastTarget("None");
 				    			}
