@@ -18,8 +18,8 @@ public class WarzAimNS extends Module{
 	public void onRender() {
 		if (this.isToggled()) {
 			if (Hitchbot.aimbotTimer<System.currentTimeMillis()-25) {
+				
 				//Hitchbot.addChatMessage(String.valueOf(Minecraft.getMinecraft().thePlayer.motionY));
-				//Hitchbot.aimbotTimer = System.currentTimeMillis();
 			}
 		}
 		super.onRender();

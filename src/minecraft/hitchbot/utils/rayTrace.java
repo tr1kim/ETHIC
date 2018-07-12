@@ -48,8 +48,8 @@ public class rayTrace {
 		Block b = Minecraft.getMinecraft().theWorld.getBlockState(new BlockPos(x1, y1, z1)).getBlock();
 		if (b.getMaterial() != Material.air) {
 			if (b.getBlockBoundsMaxX() > x1-Math.floor(x1)) {
-				if (b.getBlockBoundsMaxY() >  y1-Math.floor(x1)) {
-					if (b.getBlockBoundsMaxZ() >  z1-Math.floor(x1)) {
+				if (b.getBlockBoundsMaxY() >  y1-Math.floor(y1)) {
+					if (b.getBlockBoundsMaxZ() >  z1-Math.floor(z1)) {
 						if (b.getBlockBoundsMinX() < x1-Math.floor(x1)) {
 							if (b.getBlockBoundsMinY() <  y1-Math.floor(y1)) {
 								if (b.getBlockBoundsMinZ() <  z1-Math.floor(z1)) {

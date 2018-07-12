@@ -151,8 +151,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
 		            					boolean grappling = xyspeed > 0.3333 ? true : false;
 		            					boolean hitground = false;
-
 		            					if (!e.onGround) {
+		            						posX = e.posX;
+		            						posZ = e.posZ;
 			            					for (int i = 0; i<Math.floor(mult); i++) {
 			            						if (grappling && hitground) break;
 			            						posX += xspeed;
@@ -160,13 +161,16 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 			            						if (!hitground) {
 			            							xspeed = xspeed *0.98;
 			            							zspeed = zspeed *0.98;
-			            							posY += ySpeed + -0.08*(i+1);
+			            							posY = posY + ySpeed -0.08*(i+1);
 			            						}
 			            						if (rayTrace.inblock(posX, posY, posZ)) {
 			            							hitground = true;
+			            							posY=Math.floor(posY)+1;
 			            						}
 			            					}
 		            					}
+		            					posY +=0.05;
+
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -225,6 +229,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             					boolean grappling = xyspeed > 0.3333 ? true : false;
             					boolean hitground = false;
             					if (!ent.onGround) {
+            						posX = ent.posX;
+            						posZ = ent.posZ;
 	            					for (int i = 0; i<Math.floor(mult); i++) {
 	            						if (grappling && hitground) break;
 	            						posX += xspeed;
@@ -232,13 +238,15 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            						if (!hitground) {
 	            							xspeed = xspeed *0.98;
 	            							zspeed = zspeed *0.98;
-	            							posY += ySpeed + -0.08*i;
+	            							posY = posY + ySpeed -0.08*(i+1);
 	            						}
 	            						if (rayTrace.inblock(posX, posY, posZ)) {
 	            							hitground = true;
+	            							posY=Math.floor(posY)+1;
 	            						}
 	            					}
             					}
+            					posY +=0.05;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -316,8 +324,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
 		            					boolean grappling = xyspeed > 0.3333 ? true : false;
 		            					boolean hitground = false;
-
 		            					if (!e.onGround) {
+		            						posX = e.posX;
+		            						posZ = e.posZ;
 			            					for (int i = 0; i<Math.floor(mult); i++) {
 			            						if (grappling && hitground) break;
 			            						posX += xspeed;
@@ -325,13 +334,16 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 			            						if (!hitground) {
 			            							xspeed = xspeed *0.98;
 			            							zspeed = zspeed *0.98;
-			            							posY += ySpeed + -0.08*(i+1);
+			            							posY = posY + ySpeed -0.08*(i+1);
 			            						}
 			            						if (rayTrace.inblock(posX, posY, posZ)) {
 			            							hitground = true;
+			            							posY=Math.floor(posY)+1;
 			            						}
 			            					}
 		            					}
+		            					posY +=0.05;
+
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -390,6 +402,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             					boolean grappling = xyspeed > 0.3333 ? true : false;
             					boolean hitground = false;
             					if (!ent.onGround) {
+            						posX = ent.posX;
+            						posZ = ent.posZ;
 	            					for (int i = 0; i<Math.floor(mult); i++) {
 	            						if (grappling && hitground) break;
 	            						posX += xspeed;
@@ -397,13 +411,15 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            						if (!hitground) {
 	            							xspeed = xspeed *0.98;
 	            							zspeed = zspeed *0.98;
-	            							posY += ySpeed + -0.08*i;
+	            							posY = posY + ySpeed -0.08*(i+1);
 	            						}
 	            						if (rayTrace.inblock(posX, posY, posZ)) {
 	            							hitground = true;
+	            							posY=Math.floor(posY)+1;
 	            						}
 	            					}
             					}
+            					posY +=0.05;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -485,8 +501,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
 		            					boolean grappling = xyspeed > 0.3333 ? true : false;
 		            					boolean hitground = false;
-
 		            					if (!e.onGround) {
+		            						posX = e.posX;
+		            						posZ = e.posZ;
 			            					for (int i = 0; i<Math.floor(mult); i++) {
 			            						if (grappling && hitground) break;
 			            						posX += xspeed;
@@ -494,13 +511,16 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 			            						if (!hitground) {
 			            							xspeed = xspeed *0.98;
 			            							zspeed = zspeed *0.98;
-			            							posY += ySpeed + -0.08*(i+1);
+			            							posY = posY + ySpeed -0.08*(i+1);
 			            						}
 			            						if (rayTrace.inblock(posX, posY, posZ)) {
 			            							hitground = true;
+			            							posY=Math.floor(posY)+1;
 			            						}
 			            					}
 		            					}
+		            					posY +=0.05;
+
 						    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 						    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 						    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -559,6 +579,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             					boolean grappling = xyspeed > 0.3333 ? true : false;
             					boolean hitground = false;
             					if (!ent.onGround) {
+            						posX = ent.posX;
+            						posZ = ent.posZ;
 	            					for (int i = 0; i<Math.floor(mult); i++) {
 	            						if (grappling && hitground) break;
 	            						posX += xspeed;
@@ -566,13 +588,15 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            						if (!hitground) {
 	            							xspeed = xspeed *0.98;
 	            							zspeed = zspeed *0.98;
-	            							posY += ySpeed + -0.08*i;
+	            							posY = posY + ySpeed -0.08*(i+1);
 	            						}
 	            						if (rayTrace.inblock(posX, posY, posZ)) {
 	            							hitground = true;
+	            							posY=Math.floor(posY)+1;
 	            						}
 	            					}
             					}
+            					posY +=0.05;
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
