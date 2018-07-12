@@ -122,6 +122,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.z = playerZ;
             this.onGround = isOnGround;
             this.moving = true;
+            int rayid = 0;
+            boolean raytraceval = false;
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
             		if (m.isToggled() && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
@@ -189,7 +191,27 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 0;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX+0.35, posY+1.5, posZ+0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 1;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX+0.35, posY+1.5, posZ-0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 2;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX-0.35, posY+1.5, posZ-0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 3;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX-0.35, posY+1.5, posZ+0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 4;
+		            			    		raytraceval = true;
+		            			    	}
+						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && raytraceval) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -247,6 +269,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            					}
             					}
             					posY +=0.05;
+            					switch (rayid) {
+            					case 1:
+            						posX += 0.35;
+            						posZ += 0.35;
+            						break;
+            					case 2:
+            						posX += 0.35;
+            						posZ -= 0.35;
+            						break;
+            					case 3:
+            						posX -= 0.35;
+            						posZ -= 0.35;
+            						break;
+            					case 4:
+            						posX -= 0.35;
+            						posZ += 0.35;
+            						break;
+            					}
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -295,6 +335,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
         {
             this.yaw = playerYaw;
             this.pitch = playerPitch;
+            int rayid = 0;
+            boolean raytraceval = false;
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
             		if (m.isToggled() && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
@@ -362,7 +404,27 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 0;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX+0.35, posY+1.5, posZ+0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 1;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX+0.35, posY+1.5, posZ-0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 2;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX-0.35, posY+1.5, posZ-0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 3;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX-0.35, posY+1.5, posZ+0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 4;
+		            			    		raytraceval = true;
+		            			    	}
+						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && raytraceval) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -420,6 +482,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            					}
             					}
             					posY +=0.05;
+            					switch (rayid) {
+            					case 1:
+            						posX += 0.35;
+            						posZ += 0.35;
+            						break;
+            					case 2:
+            						posX += 0.35;
+            						posZ -= 0.35;
+            						break;
+            					case 3:
+            						posX -= 0.35;
+            						posZ -= 0.35;
+            						break;
+            					case 4:
+            						posX -= 0.35;
+            						posZ += 0.35;
+            						break;
+            					}
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
@@ -472,6 +552,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             this.z = playerZ;
             this.yaw = playerYaw;
             this.pitch = playerPitch;
+            int rayid = 0;
+            boolean raytraceval = false;
             for (Module m: Hitchbot.getModules()) {
             	if (m.getName().equalsIgnoreCase("WarzAim") || m.getName().equalsIgnoreCase("WarzAimNS")) {
             		if (m.isToggled() && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
@@ -539,7 +621,27 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    	if (yawe < 0) {
 		            			    		yawe += 360;
 		            			    	}
-						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 0;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX+0.35, posY+1.5, posZ+0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 1;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX+0.35, posY+1.5, posZ-0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 2;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX-0.35, posY+1.5, posZ-0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 3;
+		            			    		raytraceval = true;
+		            			    	}
+		            			    	if (!raytraceval && !hitchbot.utils.rayTrace.blocksInWay(posX-0.35, posY+1.5, posZ+0.35, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
+		            			    		rayid = 4;
+		            			    		raytraceval = true;
+		            			    	}
+						    			if ((((currentyawe-yawe<= Hitchbot.aimbotAngle)&&(currentyawe-yawe>= -Hitchbot.aimbotAngle)) || ((currentyawe-yawe<= 360+Hitchbot.aimbotAngle)&&(currentyawe-yawe>= 360-Hitchbot.aimbotAngle)) || ((currentyawe-yawe>= -360-Hitchbot.aimbotAngle)&&(currentyawe-yawe<= -360+Hitchbot.aimbotAngle))) && raytraceval) {
 						    				if (e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)<cls || (e.getName().equals(Hitchbot.getLastTarget()) && e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)< cls*1.8)) {
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -597,6 +699,24 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            					}
             					}
             					posY +=0.05;
+            					switch (rayid) {
+            					case 1:
+            						posX += 0.35;
+            						posZ += 0.35;
+            						break;
+            					case 2:
+            						posX += 0.35;
+            						posZ -= 0.35;
+            						break;
+            					case 3:
+            						posX -= 0.35;
+            						posZ -= 0.35;
+            						break;
+            					case 4:
+            						posX -= 0.35;
+            						posZ += 0.35;
+            						break;
+            					}
 				    			double Z = posZ - Minecraft.getMinecraft().thePlayer.posZ;
 				    			double X = posX - Minecraft.getMinecraft().thePlayer.posX;
 				    			double Y = Minecraft.getMinecraft().thePlayer.posY-posY;
