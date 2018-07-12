@@ -1,42 +1,31 @@
-[01:28:55] [Client thread/INFO]: Setting user: Player288
-[01:28:55] [Client thread/INFO]: (Session ID is token:0:Player288)
-[01:28:57] [Client thread/INFO]: LWJGL Version: 2.9.4
-[01:28:58] [Client thread/INFO]: Reloading ResourceManager: Default
-[01:28:58] [Client thread/ERROR]: Couldn't initialize twitch stream
-[01:28:58] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[01:28:59] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[01:28:59] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[01:28:59] [Thread-6/INFO]: OpenAL initialized.
-[01:28:59] [Sound Library Loader/INFO]: Sound engine started
-[01:29:01] [Client thread/INFO]: Created: 512x512 textures-atlas
-[01:29:13] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[01:29:13] [Server thread/INFO]: Generating keypair
-[01:29:13] [Server thread/INFO]: Preparing start region for level 0
-[01:29:14] [Server thread/INFO]: Changing view distance to 12, from 10
-[01:29:14] [Server thread/INFO]: Player288[local:E:acff01f7] logged in with entity id 22 at (213.5383118747109, 63.0, 465.3657862460267)
-[01:29:14] [Server thread/INFO]: Player288 joined the game
-[01:29:15] [Server thread/INFO]: Saving and pausing game...
-[01:29:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:29:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:29:15] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:29:17] [Client thread/INFO]: Using default channel type
-[01:29:17] [Client thread/INFO]: Started on 54812
-[01:29:17] [Client thread/INFO]: [CHAT] Local game hosted on port 54812
-[01:29:21] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
-[01:29:21] [Server thread/INFO]: Hitchens[/192.168.8.109:54829] logged in with entity id 278 at (178.48844649918556, 63.0, 463.27354021982694)
-[01:29:21] [Server thread/INFO]: Hitchens joined the game
-[01:29:21] [Client thread/INFO]: [CHAT] Hitchens joined the game
-[01:29:29] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > ChestEsp has been enabled!
-[01:29:30] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > ChestEsp has been disabled!
-[01:29:31] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > NameTags has been enabled!
-[01:29:34] [Server thread/INFO]: Player288 has just earned the achievement [Taking Inventory]
-[01:29:34] [Client thread/INFO]: [CHAT] Player288 has just earned the achievement [Taking Inventory]
-[01:29:46] [Client thread/INFO]: Stopping!
-[01:29:46] [Client thread/INFO]: SoundSystem shutting down...
-[01:29:46] [Server thread/INFO]: Stopping server
-[01:29:46] [Server thread/INFO]: Saving players
-[01:29:46] [Server thread/INFO]: Saving worlds
-[01:29:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:29:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:29:46] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:29:46] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[02:31:45] [Client thread/INFO]: Setting user: Player671
+[02:31:45] [Client thread/INFO]: (Session ID is token:0:Player671)
+[02:31:47] [Client thread/INFO]: LWJGL Version: 2.9.4
+[02:31:49] [Client thread/INFO]: Reloading ResourceManager: Default
+[02:31:49] [Client thread/ERROR]: Couldn't initialize twitch stream
+[02:31:49] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[02:31:49] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[02:31:49] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[02:31:49] [Thread-6/INFO]: OpenAL initialized.
+[02:31:49] [Sound Library Loader/INFO]: Sound engine started
+[02:31:50] [Client thread/INFO]: Created: 512x512 textures-atlas
+[02:32:01] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[02:32:01] [Server thread/INFO]: Generating keypair
+[02:32:02] [Server thread/INFO]: Preparing start region for level 0
+[02:32:02] [Server thread/INFO]: Changing view distance to 12, from 10
+[02:32:03] [Server thread/INFO]: Player671[local:E:77cfe43b] logged in with entity id 22 at (199.1300965392613, 64.0, 437.2217187738811)
+[02:32:03] [Server thread/INFO]: Player671 joined the game
+[02:32:04] [Server thread/INFO]: Saving and pausing game...
+[02:32:04] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[02:32:04] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[02:32:04] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[02:32:07] [Client thread/INFO]: Using default channel type
+[02:32:07] [Client thread/INFO]: Started on 55921
+[02:32:07] [Client thread/INFO]: [CHAT] Local game hosted on port 55921
+[02:32:11] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
+[02:32:11] [Server thread/INFO]: Hitchens[/192.168.8.109:55939] logged in with entity id 247 at (197.18365843269308, 65.0, 446.62863616060287)
+[02:32:11] [Server thread/INFO]: Hitchens joined the game
+[02:32:11] [Client thread/INFO]: [CHAT] Hitchens joined the game
+[02:32:23] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > Xray has been enabled!
+[02:32:36] [Server thread/INFO]: Player671 has just earned the achievement [Taking Inventory]
+[02:32:36] [Client thread/INFO]: [CHAT] Player671 has just earned the achievement [Taking Inventory]

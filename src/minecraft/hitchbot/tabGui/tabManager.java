@@ -18,6 +18,7 @@ import hitchbot.mods.ToggleSprint;
 import hitchbot.mods.Tracers;
 import hitchbot.mods.WarzAim;
 import hitchbot.mods.WarzAimNS;
+import hitchbot.mods.Xray;
 
 public class tabManager {
 	private ArrayList<Tab>  tabs;
@@ -45,6 +46,7 @@ public class tabManager {
 		renderMods.put(3, new Tracers());
 		renderMods.put(4, new ChestEsp());
 		renderMods.put(5, new NameTags());
+		renderMods.put(6, new Xray());
 		
 		movementMods.put(0, new ToggleSprint());
 		movementMods.put(1, new SimpleFlight());

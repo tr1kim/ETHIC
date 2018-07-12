@@ -67,6 +67,8 @@ public class GuiIngameHook extends GuiIngame{
         	mc.fontRendererObj.drawString("ChestEsp", 85, 111, isEnabled("ChestEsp") ? 0x0000ff00 : 0xffffffff);
     		drawRect(145, 125, 75, 145, Hitchbot.tabManager.getCurrentRenderMod()== 5 ? 0xaf0d0d0d : 0xaf676c6e);
         	mc.fontRendererObj.drawString("NameTags", 85, 131, isEnabled("NameTags") ? 0x0000ff00 : 0xffffffff);
+    		drawRect(145, 145, 75, 165, Hitchbot.tabManager.getCurrentRenderMod()== 6 ? 0xaf0d0d0d : 0xaf676c6e);
+        	mc.fontRendererObj.drawString("Xray (P)", 85, 151, isEnabled("Xray") ? 0x0000ff00 : 0xffffffff);
     	}
     	if (Hitchbot.tabManager.getTabs().get(1).isExpanded()) {
     		drawRect(145, 45, 75, 65, Hitchbot.tabManager.getCurrentMovementMod()== 0 ? 0xaf0d0d0d : 0xaf676c6e);

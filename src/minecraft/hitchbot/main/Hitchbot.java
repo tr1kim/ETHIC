@@ -15,6 +15,7 @@ import hitchbot.mods.ToggleSprint;
 import hitchbot.mods.Tracers;
 import hitchbot.mods.WarzAim;
 import hitchbot.mods.WarzAimNS;
+import hitchbot.mods.Xray;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.play.server.S02PacketChat;
 import net.minecraft.util.ChatComponentText;
@@ -61,6 +62,7 @@ public class Hitchbot {
 		addMod(new Tracers());
 		addMod(new ChestEsp());
 		addMod(new NameTags());
+		addMod(new Xray());
 	}
 	
 	public static void addFriend(String n) {

@@ -59,6 +59,7 @@ public abstract class Render<T extends Entity>
      */
     public void doRender(T entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
+    	GL11.glDepthFunc(GL11.GL_LEQUAL);
         this.renderName(entity, x, y, z);
     }
 

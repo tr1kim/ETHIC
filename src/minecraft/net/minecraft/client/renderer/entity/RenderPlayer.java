@@ -2,6 +2,8 @@ package net.minecraft.client.renderer.entity;
 
 import java.util.ArrayList;
 
+import org.lwjgl.opengl.GL11;
+
 import hitchbot.main.Hitchbot;
 import hitchbot.mods.Module;
 import net.minecraft.client.entity.AbstractClientPlayer;
@@ -36,6 +38,7 @@ public class RenderPlayer extends RendererLivingEntity<AbstractClientPlayer>
     {
         super(renderManager, new ModelPlayer(0.0F, useSmallArms), 0.5F);
         this.smallArms = useSmallArms;
+        int f  = GL11.GL_DEPTH_FUNC;
         this.addLayer(new LayerBipedArmor(this));
         this.addLayer(new LayerHeldItem(this));
         this.addLayer(new LayerArrow(this));
@@ -57,6 +60,11 @@ public class RenderPlayer extends RendererLivingEntity<AbstractClientPlayer>
      */
     public void doRender(AbstractClientPlayer entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
+    	for (Module m : Hitchbot.getModules()) {
+    		if (m.isToggled() && m.getName().equalsIgnoreCase("Xray")) {
+    	    	GL11.glDepthFunc(GL11.GL_ALWAYS);
+    		}
+    	}
         if (!entity.isUser() || this.renderManager.livingPlayer == entity)
         {
             double d0 = y;
