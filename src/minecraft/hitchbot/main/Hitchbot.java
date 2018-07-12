@@ -2,6 +2,8 @@ package hitchbot.main;
 
 import java.util.ArrayList;
 
+import org.lwjgl.input.Keyboard;
+
 import hitchbot.command.CommandManager;
 import hitchbot.mods.AutoSteak;
 import hitchbot.mods.ChestEsp;
@@ -30,10 +32,10 @@ public class Hitchbot {
 	public static ArrayList<Integer> guns;
 	public static float aimbotAngle;
 	public static float aimbotRange;
-	public static double aimbotTimer;
+	public static boolean gui;
 	
 	public Hitchbot() {
-		aimbotTimer = System.currentTimeMillis();
+		gui = true;
 		aimbotAngle = 30;
 		aimbotRange = 40;
 		mods = new ArrayList<Module>();
@@ -114,6 +116,9 @@ public class Hitchbot {
 	}
 	
 	public static void onKeyPressed(int k) {
+		if (k == Keyboard.KEY_L) {
+			gui = !gui;
+		}
 		for (Module m : mods) {
 			if (m.getKey() == k && SebeanRest(m)) {
 				m.toggle();

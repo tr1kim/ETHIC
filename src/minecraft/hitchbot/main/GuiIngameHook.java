@@ -16,20 +16,22 @@ public class GuiIngameHook extends GuiIngame{
 
     public void renderGameOverlay(float partialTicks)
     {
-    	super.renderGameOverlay(partialTicks);
-        ScaledResolution scaledresolution = new ScaledResolution(this.mc);
-        this.mc.entityRenderer.setupOverlayRendering();
-        GlStateManager.enableBlend();
-        int count = 0;
-        mc.fontRendererObj.drawString("\2475\247lActive mods:", 5, 107, 0xffffff);
-        for (Module m: Hitchbot.getModules()) {
-        	if(m.isToggled())
-        	{
-        		mc.fontRendererObj.drawString(m.getName(), 5, 117+(count*10), 0xffffff);
-        		count++;
-        	}
-        }
-        drawTabGui();
+	    super.renderGameOverlay(partialTicks);
+	    ScaledResolution scaledresolution = new ScaledResolution(this.mc);
+	    this.mc.entityRenderer.setupOverlayRendering();
+	    GlStateManager.enableBlend();
+	    int count = 0;
+	    if (Hitchbot.gui) {
+	        mc.fontRendererObj.drawString("\2475\247lActive mods:", 5, 107, 0xffffff);
+	        for (Module m: Hitchbot.getModules()) {
+	        	if(m.isToggled())
+	        	{
+	        		mc.fontRendererObj.drawString(m.getName(), 5, 117+(count*10), 0xffffff);
+	        		count++;
+	        	}
+	        }
+	        drawTabGui();
+    	}
     }
     private boolean isEnabled(String s) {
     	ArrayList<Module> mds = Hitchbot.getModules();

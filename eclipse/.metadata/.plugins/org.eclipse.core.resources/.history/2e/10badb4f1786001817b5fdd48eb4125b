@@ -1,0 +1,43 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+import hitchbot.main.Hitchbot;
+import net.minecraft.client.Minecraft;
+
+public class LongJump extends Module {
+
+	
+	
+	public LongJump() {
+		super("LongJump", Keyboard.KEY_F, Category.PLAYER);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public void onDisable() {
+		super.onDisable();
+	}
+	
+	public void onUpdate() {
+		if (this.isToggled()) {
+			if (mc.gameSettings.keyBindJump.isPressed()) {
+			}
+			super.onUpdate();
+		}
+	}
+	@Override
+	public void onRender() {
+		if (Hitchbot.LongJumpTimer<System.currentTimeMillis()-50) {
+			if(Minecraft.getMinecraft().thePlayer.onGround) {
+				if (!Minecraft.getMinecraft().thePlayer.capabilities.allowFlying && Minecraft.getMinecraft().thePlayer.capabilities.isFlying) {
+					Minecraft.getMinecraft().thePlayer.setVelocity(Minecraft.getMinecraft().thePlayer.motionX, Minecraft.getMinecraft().thePlayer.motionY, Minecraft.getMinecraft().thePlayer.motionZ);
+				}
+			}
+			//Hitchbot.addChatMessage(String.valueOf(Minecraft.getMinecraft().thePlayer.motionY));
+		}
+		super.onRender();
+	}
+
+}

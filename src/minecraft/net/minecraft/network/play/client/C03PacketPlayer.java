@@ -148,7 +148,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
 		            					double xspeed = (e.posX - e.lastTickPosX);
 		            					double zspeed = (e.posZ - e.lastTickPosZ);
-		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed*xspeed);
 		            					boolean grappling = xyspeed > 0.3333 ? true : false;
 		            					boolean hitground = false;
 		            					if (!e.onGround) {
@@ -194,7 +194,6 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
-						    					Hitchbot.setLastTarget(e.getName());
 		                						if (e.getName().equals(Hitchbot.getLastTarget())) {
 		                							ent = e;
 							    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -204,6 +203,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 							    						cls = (float) (cls / 1.7);
 							    					}
 		                						}
+		                						Hitchbot.setLastTarget(e.getName());
 						    				}
 						    			}
 						    			
@@ -321,7 +321,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
 		            					double xspeed = (e.posX - e.lastTickPosX);
 		            					double zspeed = (e.posZ - e.lastTickPosZ);
-		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed*xspeed);
 		            					boolean grappling = xyspeed > 0.3333 ? true : false;
 		            					boolean hitground = false;
 		            					if (!e.onGround) {
@@ -367,7 +367,6 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
-						    					Hitchbot.setLastTarget(e.getName());
 		                						if (e.getName().equals(Hitchbot.getLastTarget())) {
 		                							ent = e;
 							    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -377,6 +376,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 							    						cls = (float) (cls / 1.7);
 							    					}
 		                						}
+		                						Hitchbot.setLastTarget(e.getName());
 						    				}
 						    			}
 						    			
@@ -498,7 +498,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            					double posZ = e.posZ + (e.posZ - e.lastTickPosZ)*mult;
 		            					double xspeed = (e.posX - e.lastTickPosX);
 		            					double zspeed = (e.posZ - e.lastTickPosZ);
-		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed + xspeed);
+		            					double xyspeed = Math.sqrt(zspeed*zspeed + xspeed*xspeed);
 		            					boolean grappling = xyspeed > 0.3333 ? true : false;
 		            					boolean hitground = false;
 		            					if (!e.onGround) {
@@ -544,7 +544,6 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 
 						    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
 						    					ent = e;
-						    					Hitchbot.setLastTarget(e.getName());
 		                						if (e.getName().equals(Hitchbot.getLastTarget())) {
 		                							ent = e;
 							    					cls = (float) e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ);
@@ -554,6 +553,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 							    						cls = (float) (cls / 1.7);
 							    					}
 		                						}
+		                						Hitchbot.setLastTarget(e.getName());
 						    				}
 						    			}
 						    			

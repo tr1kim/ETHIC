@@ -3,13 +3,15 @@ package hitchbot.mods;
 import org.lwjgl.input.Keyboard;
 
 import hitchbot.main.Category;
+import hitchbot.main.Hitchbot;
+import net.minecraft.client.Minecraft;
 
 public class LongJump extends Module {
 
 	
 	
 	public LongJump() {
-		super("LJump", Keyboard.KEY_F, Category.PLAYER);
+		super("LongJump", Keyboard.KEY_F, Category.PLAYER);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -17,13 +19,5 @@ public class LongJump extends Module {
 	public void onDisable() {
 		super.onDisable();
 	}
-	
-	public void onUpdate() {
-		if (this.isToggled()) {
-			if (mc.gameSettings.keyBindJump.isPressed()) {
-				//mc.thePlayer.motionX += 0.05;
-			}
-			super.onUpdate();
-		}
-	}
+
 }
