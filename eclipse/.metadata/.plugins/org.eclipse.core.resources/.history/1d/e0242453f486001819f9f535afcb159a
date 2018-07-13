@@ -1,0 +1,13 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+
+public class ESPShader extends Module{
+
+	public ESPShader(String nm, int k, Category c) {
+		super("ESPShader", Keyboard.KEY_X, Category.RENDER);
+	}
+
+}

@@ -8,6 +8,7 @@ import org.lwjgl.input.Keyboard;
 import hitchbot.main.Hitchbot;
 import hitchbot.mods.AutoSteak;
 import hitchbot.mods.ChestEsp;
+import hitchbot.mods.ESPShader;
 import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
 import hitchbot.mods.NameTags;
@@ -47,6 +48,7 @@ public class tabManager {
 		renderMods.put(4, new ChestEsp());
 		renderMods.put(5, new NameTags());
 		renderMods.put(6, new Xray());
+		renderMods.put(7, new ESPShader());
 		
 		movementMods.put(0, new ToggleSprint());
 		movementMods.put(1, new LongJump());

@@ -13,6 +13,7 @@ public class Module {
 	private boolean toggled;
 	private Category category;
 	
+	
 	public Module(String nm, int k, Category c) {
 		name = nm;
 		key = k;
@@ -34,6 +35,7 @@ public class Module {
 	public void onEnable() 	{}
 	public void onDisable() {}
 	public void onUpdate() {}
+	public void onUpdatePOST() {}
 	public void onRender() {}
 	public Minecraft getMc() {
 		return mc;

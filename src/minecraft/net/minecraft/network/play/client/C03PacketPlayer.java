@@ -134,13 +134,14 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
-						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+						    			double currentrotation1 = (Hitchbot.aimbotYawTemp%360);
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
 		            					try {
-		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/Hitchbot.pingdiv+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
 		            					}catch(NullPointerException ex){
 		            						ex.printStackTrace();
 		            					}finally{
+		            						
 		            						
 		            					}
 		            					float t = e.fallDistance;
@@ -232,9 +233,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    }
             				}
             				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/Hitchbot.pingdiv+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
@@ -295,6 +296,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
 				                this.rotating = true;
+								Hitchbot.aimbotTimer = System.currentTimeMillis();
 				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 				    				Hitchbot.setLastTarget("None");
 				    			}
@@ -347,13 +349,14 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
-						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+						    			double currentrotation1 = (Hitchbot.aimbotYawTemp%360);
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
 		            					try {
-		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/Hitchbot.pingdiv+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
 		            					}catch(NullPointerException ex){
 		            						ex.printStackTrace();
 		            					}finally{
+		            						
 		            						
 		            					}
 		            					float t = e.fallDistance;
@@ -445,9 +448,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    }
             				}
             				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/Hitchbot.pingdiv+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
@@ -508,6 +511,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
 				                this.rotating = true;
+								Hitchbot.aimbotTimer = System.currentTimeMillis();
 				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 				    				Hitchbot.setLastTarget("None");
 				    			}
@@ -520,6 +524,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             }
             this.onGround = isOnGround;
             this.rotating = true;
+            Hitchbot.yawt = this.yaw;
+            Hitchbot.pitcht = this.pitch;
         }
 
         public void readPacketData(PacketBuffer buf) throws IOException
@@ -564,13 +570,14 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 	            			    List<Entity> entities = Minecraft.getMinecraft().theWorld.getEntitiesWithinAABB(Entity.class, AxisAlignedBB.fromBounds(Minecraft.getMinecraft().thePlayer.posX - 50, Minecraft.getMinecraft().thePlayer.posY - 50, Minecraft.getMinecraft().thePlayer.posZ - 50, Minecraft.getMinecraft().thePlayer.posX + 50, Minecraft.getMinecraft().thePlayer.posY + 50, Minecraft.getMinecraft().thePlayer.posZ + 50));
 	            			    for (Entity e : entities) {
 	            			    	if (e instanceof EntityPlayer && (e.getName() != Minecraft.getMinecraft().thePlayer.getName()) &&(!Hitchbot.isFriend(e.getName()))) {
-						    			double currentrotation1 = (Minecraft.getMinecraft().thePlayer.getRotationYawHead()%360);
-		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+						    			double currentrotation1 = (Hitchbot.aimbotYawTemp%360);
+		            					double mult = e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
 		            					try {
-		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+		            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/Hitchbot.pingdiv+e.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
 		            					}catch(NullPointerException ex){
 		            						ex.printStackTrace();
 		            					}finally{
+		            						
 		            						
 		            					}
 		            					float t = e.fallDistance;
@@ -662,9 +669,9 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 		            			    }
             				}
             				if (ent != null) {
-            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+            					double mult = ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/Hitchbot.bulletspeed;
             					try {
-            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/25+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
+            					mult = Minecraft.getMinecraft().getCurrentServerData().pingToServer/Hitchbot.pingdiv+ent.getDistance(Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY, Minecraft.getMinecraft().thePlayer.posZ)/3.9;
             					}catch(NullPointerException e){
             						e.printStackTrace();
             					}finally{
@@ -725,6 +732,7 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
 				    			this.yaw = (float) ((float)yawe*180/Math.PI-90);
 				    			this.pitch = 90F-(float) ((float) pitchdife*180/Math.PI);
 				                this.rotating = true;
+								Hitchbot.aimbotTimer = System.currentTimeMillis();
 				    			if (hitchbot.utils.rayTrace.blocksInWay(posX, posY+1.5, posZ, Minecraft.getMinecraft().thePlayer.posX, Minecraft.getMinecraft().thePlayer.posY+1.5, Minecraft.getMinecraft().thePlayer.posZ)) {
 				    				Hitchbot.setLastTarget("None");
 				    			}
@@ -735,6 +743,8 @@ public class C03PacketPlayer implements Packet<INetHandlerPlayServer>
             		}
             	}
             }
+            Hitchbot.yawt = this.yaw;
+            Hitchbot.pitcht = this.pitch;
             this.onGround = playerIsOnGround;
             this.rotating = true;
             this.moving = true;

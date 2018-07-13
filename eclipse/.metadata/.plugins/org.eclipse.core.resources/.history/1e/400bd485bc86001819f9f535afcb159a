@@ -1,0 +1,22 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+
+public class Bridge extends Module{
+
+	public Bridge() {
+		super("Bridge", Keyboard.KEY_Z, Category.PLAYER);
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public void onUpdate() {
+		if (isToggled()) {
+			
+		}
+		super.onUpdate();
+	}
+	
+
+}

@@ -7,6 +7,7 @@ import org.lwjgl.input.Keyboard;
 import hitchbot.command.CommandManager;
 import hitchbot.mods.AutoSteak;
 import hitchbot.mods.ChestEsp;
+import hitchbot.mods.ESPShader;
 import hitchbot.mods.FullBright;
 import hitchbot.mods.Module;
 import hitchbot.mods.NameTags;
@@ -33,8 +34,23 @@ public class Hitchbot {
 	public static float aimbotAngle;
 	public static float aimbotRange;
 	public static boolean gui;
+	public static float bulletspeed;
+	public static float pingdiv;
+	public static double aimbotTimer;
+	public static float aimbotYawTemp;
+	public static float yawt = 0;
+	public static float pitcht = 0;
+	public static float aimbotPitchTemp;
+	public static ArrayList<Integer> blocks;
 	
 	public Hitchbot() {
+		blocks = new ArrayList<Integer>();
+		blocks.add(1);
+		aimbotYawTemp = 0;
+		aimbotPitchTemp = 3;
+		aimbotTimer = System.currentTimeMillis();
+		pingdiv = 25;
+		bulletspeed = (float) 4.5;
 		gui = true;
 		aimbotAngle = 30;
 		aimbotRange = 40;
@@ -65,6 +81,7 @@ public class Hitchbot {
 		addMod(new ChestEsp());
 		addMod(new NameTags());
 		addMod(new Xray());
+		addMod(new ESPShader());
 	}
 	
 	public static void addFriend(String n) {
@@ -103,9 +120,15 @@ public class Hitchbot {
 		return;
 	}
 	
-	public static void onUpdate() {
+	public static void onUpdatePre() {
 		for (Module m: mods) {
 			m.onUpdate();
+		}
+	}
+	
+	public static void onUpdatePost() {
+		for (Module m: mods) {
+			m.onUpdatePOST();
 		}
 	}
 	
@@ -114,6 +137,8 @@ public class Hitchbot {
 			m.onRender();
 		}
 	}
+	
+
 	
 	public static void onKeyPressed(int k) {
 		if (k == Keyboard.KEY_L) {

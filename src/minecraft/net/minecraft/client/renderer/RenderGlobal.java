@@ -4,6 +4,10 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonSyntaxException;
+
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
+
 import java.io.IOException;
 import java.util.Collection;
 import java.util.EnumSet;
@@ -255,6 +259,18 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
 
     public void renderEntityOutlineFramebuffer()
     {
+    	for (Module m: Hitchbot.getModules()) {
+    		if (m.isToggled() && m.getName().equalsIgnoreCase("ESPShader")) {
+    	        if (true) {
+    	            GlStateManager.enableBlend();
+    	            GlStateManager.tryBlendFuncSeparate(770, 771, 0, 1);
+    	            this.entityOutlineFramebuffer.framebufferRenderExt(this.mc.displayWidth, this.mc.displayHeight, false);
+    	            GlStateManager.disableBlend();
+    	        }
+    		}
+    	}
+
+        /*
         if (this.isRenderEntityOutlines())
         {
             GlStateManager.enableBlend();
@@ -262,6 +278,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
             this.entityOutlineFramebuffer.framebufferRenderExt(this.mc.displayWidth, this.mc.displayHeight, false);
             GlStateManager.disableBlend();
         }
+        */
     }
 
     protected boolean isRenderEntityOutlines()
@@ -274,6 +291,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
         Tessellator tessellator = Tessellator.getInstance();
         WorldRenderer worldrenderer = tessellator.getWorldRenderer();
 
+        
         if (this.sky2VBO != null)
         {
             this.sky2VBO.deleteGlBuffers();
@@ -594,7 +612,7 @@ public class RenderGlobal implements IWorldAccess, IResourceManagerReloadListene
                 }
             }
 
-            if (this.isRenderEntityOutlines())
+            if (this.isRenderEntityOutlines() || true)
             {
                 GlStateManager.depthFunc(519);
                 GlStateManager.disableFog();

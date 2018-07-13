@@ -1,0 +1,43 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+import hitchbot.main.Hitchbot;
+import net.minecraft.client.Minecraft;
+import net.minecraft.item.Item;
+import net.minecraft.network.play.client.C03PacketPlayer;
+import net.minecraft.network.play.client.C03PacketPlayer.C05PacketPlayerLook;
+import net.minecraft.network.play.client.C03PacketPlayer.C06PacketPlayerPosLook;
+import paulscode.sound.libraries.LibraryLWJGLOpenAL.Exception;
+
+public class WarzAimNS extends Module{
+
+	public WarzAimNS() {
+		super("WarzAimNS", Keyboard.KEY_V, Category.COMBAT);
+	}
+	
+	@Override
+	public void onEnable() {
+		Hitchbot.aimbotYawTemp = Minecraft.getMinecraft().thePlayer.rotationYaw;
+		super.onEnable();
+	}
+	
+	@Override
+	public void onUpdate() {
+		if (this.isToggled() && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
+			Hitchbot.aimbotYawTemp = Minecraft.getMinecraft().thePlayer.rotationYaw;
+			Minecraft.getMinecraft().thePlayer.rotationYaw = Hitchbot.yawt;
+		}
+		super.onUpdate();
+	}
+	
+	@Override
+	public void onUpdatePOST() {
+		if (this.isToggled() && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
+			Minecraft.getMinecraft().thePlayer.rotationYaw= Hitchbot.aimbotYawTemp;
+		}
+		super.onUpdatePOST();
+	}
+
+}

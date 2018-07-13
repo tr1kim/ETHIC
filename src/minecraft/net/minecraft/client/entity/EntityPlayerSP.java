@@ -1,6 +1,7 @@
 package net.minecraft.client.entity;
 
 import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.MovingSoundMinecartRiding;
 import net.minecraft.client.audio.PositionedSoundRecord;
@@ -230,7 +231,12 @@ public class EntityPlayerSP extends AbstractClientPlayer
             double d4 = (double)(this.rotationPitch - this.lastReportedPitch);
             boolean flag2 = d0 * d0 + d1 * d1 + d2 * d2 > 9.0E-4D || this.positionUpdateTicks >= 20;
             boolean flag3 = d3 != 0.0D || d4 != 0.0D;
-
+            for (Module m: Hitchbot.getModules()) {
+            	if (m.getName().equalsIgnoreCase("WarzAim") && m.isToggled() && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
+            		flag3 = true;
+            	}
+            }
+            //hitchbot
             if (this.ridingEntity == null)
             {
                 if (flag2 && flag3)
@@ -720,7 +726,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
     public void onLivingUpdate()
     {
     	//hitchbot
-    	Hitchbot.onUpdate();
+    	Hitchbot.onUpdatePre();
         if (this.sprintingTicksLeft > 0)
         {
             --this.sprintingTicksLeft;
@@ -913,5 +919,7 @@ public class EntityPlayerSP extends AbstractClientPlayer
             this.capabilities.isFlying = false;
             this.sendPlayerAbilities();
         }
+    	//hitchbot
+    	Hitchbot.onUpdatePost();
     }
 }
