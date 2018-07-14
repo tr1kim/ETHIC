@@ -1,0 +1,29 @@
+package hitchbot.mods;
+
+import org.lwjgl.input.Keyboard;
+
+import hitchbot.main.Category;
+import hitchbot.utils.RenderUtils;
+import net.minecraft.client.Minecraft;
+import net.minecraft.tileentity.TileEntityChest;
+
+public class WarzAim extends Module{
+	
+	public WarzAim() {
+		super("WarzAim", Keyboard.KEY_B, Category.COMBAT);
+	}
+	
+	@Override
+	public void onRender()
+	{
+		if (this.isToggled()) {
+			for(Object o : Minecraft.getMinecraft().theWorld.loadedTileEntityList)
+			{
+				if (o instanceof TileEntityChest) {
+					RenderUtils.chestESPBox(((TileEntityChest)o));
+				}
+			}
+		}
+	}
+	
+}

@@ -3,13 +3,18 @@ package net.minecraft.util;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 
+import hitchbot.main.Hitchbot;
+import hitchbot.mods.Module;
+import net.minecraft.client.Minecraft;
+import net.minecraft.item.Item;
+
 public class MouseHelper
 {
     /** Mouse delta X this frame */
-    public int deltaX;
+    public float deltaX;
 
     /** Mouse delta Y this frame */
-    public int deltaY;
+    public float deltaY;
 
     /**
      * Grabs the mouse cursor it doesn't move and isn't seen.
@@ -32,7 +37,21 @@ public class MouseHelper
 
     public void mouseXYChange()
     {
-        this.deltaX = Mouse.getDX();
-        this.deltaY = Mouse.getDY();
+
+    	for (Module m: Hitchbot.getModules()) {
+    		if (m.isToggled() && m.getName().equalsIgnoreCase("WarzAimNS") && Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {
+		    	if (Hitchbot.aimbottruefalse) {
+		    		this.deltaX = (float) ((float) (Mouse.getDX())+0.1);
+		        	this.deltaY = Mouse.getDY();
+		    	}else {
+		    		this.deltaX = (float) ((float) (Mouse.getDX())-0.1);
+		        	this.deltaY = Mouse.getDY();
+		    	}
+		    	Hitchbot.aimbottruefalse = !Hitchbot.aimbottruefalse;
+		    	return;
+    		}
+    	}
+		this.deltaX = Mouse.getDX();
+    	this.deltaY = Mouse.getDY();
     }
 }

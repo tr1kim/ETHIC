@@ -42,8 +42,10 @@ public class Hitchbot {
 	public static float pitcht = 0;
 	public static float aimbotPitchTemp;
 	public static ArrayList<Integer> blocks;
+	public static boolean aimbottruefalse;
 	
 	public Hitchbot() {
+		aimbottruefalse = true;
 		blocks = new ArrayList<Integer>();
 		blocks.add(1);
 		aimbotYawTemp = 0;

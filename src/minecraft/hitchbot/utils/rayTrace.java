@@ -13,7 +13,7 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-public class rayTrace {
+public class rayTrace  {
 	public static boolean blocksInWay(double x1, double y1, double z1, double x2, double y2, double z2) {
 		double xdif = x2-x1;
 		double ydif = y2-y1;

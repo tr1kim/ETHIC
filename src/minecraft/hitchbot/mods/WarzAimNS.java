@@ -23,6 +23,7 @@ public class WarzAimNS extends Module{
 		super.onEnable();
 	}
 	
+	
 	@Override
 	public void onUpdate() {
 		if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null &&  Minecraft.getMinecraft().thePlayer != null && this.isToggled() && Hitchbot.guns.contains(Item.getIdFromItem(Minecraft.getMinecraft().thePlayer.getHeldItem().getItem()))) {

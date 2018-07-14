@@ -1,54 +1,223 @@
-[01:35:00] [Client thread/INFO]: Setting user: Player618
-[01:35:00] [Client thread/INFO]: (Session ID is token:0:Player618)
-[01:35:02] [Client thread/INFO]: LWJGL Version: 2.9.4
-[01:35:04] [Client thread/INFO]: Reloading ResourceManager: Default
-[01:35:04] [Client thread/ERROR]: Couldn't initialize twitch stream
-[01:35:04] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[01:35:04] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[01:35:04] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[01:35:04] [Thread-6/INFO]: OpenAL initialized.
-[01:35:04] [Sound Library Loader/INFO]: Sound engine started
-[01:35:05] [Client thread/INFO]: Created: 512x512 textures-atlas
-[01:35:11] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[01:35:11] [Server thread/INFO]: Generating keypair
-[01:35:11] [Server thread/INFO]: Preparing start region for level 0
-[01:35:12] [Server thread/INFO]: Player618[local:E:0a7ac287] logged in with entity id 398 at (-401.99590718598427, 67.0, -1.0727623555022041)
-[01:35:12] [Server thread/INFO]: Player618 joined the game
-[01:35:13] [Server thread/INFO]: Saving and pausing game...
-[01:35:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:35:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:35:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:35:22] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > ESPShader has been enabled!
-[01:35:23] [Server thread/INFO]: Saving and pausing game...
-[01:35:23] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:35:23] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:35:23] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:35:32] [Client thread/INFO]: Using default channel type
-[01:35:32] [Client thread/INFO]: Started on 59902
-[01:35:32] [Client thread/INFO]: [CHAT] Local game hosted on port 59902
-[01:35:35] [User Authenticator #1/INFO]: UUID of player Hitchens is b3440621-e3ae-4b2c-9038-e72344170be0
-[01:35:35] [Server thread/INFO]: Hitchens[/192.168.8.109:59903] logged in with entity id 968 at (-398.8125857725293, 66.0, -4.9024505562916385)
-[01:35:35] [Server thread/INFO]: Hitchens joined the game
-[01:35:35] [Client thread/INFO]: [CHAT] Hitchens joined the game
-[01:35:41] [Server thread/INFO]: Player618 has just earned the achievement [Taking Inventory]
-[01:35:41] [Client thread/INFO]: [CHAT] Player618 has just earned the achievement [Taking Inventory]
-[01:35:51] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
-[01:35:52] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been disabled!
-[01:35:52] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
-[01:35:54] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been disabled!
-[01:36:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
-[01:36:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been disabled!
-[01:36:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been enabled!
-[01:36:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > OptifineZoom has been disabled!
-[01:36:06] [Server thread/INFO]: Player618 lost connection: TextComponent{text='Disconnected', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
-[01:36:06] [Server thread/INFO]: Player618 left the game
-[01:36:06] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[01:36:07] [Server thread/INFO]: Stopping server
-[01:36:07] [Server thread/INFO]: Saving players
-[01:36:07] [Server thread/INFO]: Saving worlds
-[01:36:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
-[01:36:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
-[01:36:07] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
-[01:36:08] [Client thread/INFO]: Stopping!
-[01:36:08] [Client thread/INFO]: SoundSystem shutting down...
-[01:36:09] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:04:38] [Client thread/INFO]: Setting user: Player263
+[16:04:38] [Client thread/INFO]: (Session ID is token:0:Player263)
+[16:04:41] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:04:41] [Client thread/INFO]: Reloading ResourceManager: Default
+[16:04:41] [Client thread/ERROR]: Couldn't initialize twitch stream
+[16:04:41] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:04:42] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[16:04:42] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:04:42] [Thread-6/INFO]: OpenAL initialized.
+[16:04:42] [Sound Library Loader/INFO]: Sound engine started
+[16:04:43] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:04:49] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[16:04:49] [Server thread/INFO]: Generating keypair
+[16:04:49] [Server thread/INFO]: Preparing start region for level 0
+[16:04:50] [Server thread/INFO]: Player263[local:E:1079cae8] logged in with entity id 386 at (-409.3130543718529, 71.0, 18.89878758869984)
+[16:04:50] [Server thread/INFO]: Player263 joined the game
+[16:04:52] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577092921
+[16:04:52] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577092987
+[16:04:53] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577093036
+[16:04:53] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577093103
+[16:04:53] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577093337
+[16:04:53] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577093403
+[16:04:53] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577093470
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > WarzAimNS has been enabled!
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096087
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096137
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096253
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096303
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096420
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096470
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096520
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096637
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096687
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096803
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096853
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096903
+[16:04:56] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577096954
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097070
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097120
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097170
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097287
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097387
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097503
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097553
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097603
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097653
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097770
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097820
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097870
+[16:04:57] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577097920
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098037
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098087
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098137
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098187
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098237
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098353
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098403
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098503
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098738
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098747
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098829
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098887
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098937
+[16:04:58] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577098987
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099037
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099087
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099137
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099187
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099303
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099353
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099403
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099453
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099503
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099670
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099720
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099770
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099820
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099870
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099921
+[16:04:59] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577099970
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100087
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100137
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100186
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100237
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100287
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100337
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100387
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100437
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100553
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100603
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100704
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100753
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100804
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100854
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100903
+[16:05:00] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577100953
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101070
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101120
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101170
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101220
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101270
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101320
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101371
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101420
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101470
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101519
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101637
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101689
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101787
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101837
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101886
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101937
+[16:05:01] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577101987
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102037
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102086
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102137
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102253
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102304
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102354
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102403
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102453
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102503
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102554
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102603
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102654
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102704
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102753
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102854
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102904
+[16:05:02] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577102970
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103020
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103071
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103120
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103198
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103320
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103370
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103420
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103470
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103520
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103570
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103620
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103670
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103720
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103770
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103936
+[16:05:03] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577103987
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104037
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104087
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104137
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104187
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104237
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104287
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104337
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104387
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104437
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104487
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104537
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104587
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104637
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104692
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104737
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104787
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104837
+[16:05:04] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577104887
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105053
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105104
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105153
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105203
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105254
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105303
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105354
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105403
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105453
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105503
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105553
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105603
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105653
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105704
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105753
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105804
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105854
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105903
+[16:05:05] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577105954
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106053
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106103
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106154
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106204
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106253
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106303
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106354
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106403
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106454
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106570
+[16:05:06] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577106623
+[16:05:07] [Server thread/INFO]: <Player263> sdfdsf
+[16:05:07] [Client thread/INFO]: [CHAT] <Player263> sdfdsf
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107320
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107370
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107420
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107470
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107520
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107570
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107620
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107670
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107720
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107770
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107820
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107870
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107921
+[16:05:07] [Client thread/INFO]: [CHAT] [§5ETHIC§f] > PACKET: 1531577107970
+[16:05:13] [Server thread/INFO]: Saving and pausing game...
+[16:05:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:05:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:05:13] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:05:14] [Server thread/INFO]: Stopping server
+[16:05:14] [Server thread/INFO]: Saving players
+[16:05:14] [Server thread/INFO]: Saving worlds
+[16:05:14] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[16:05:14] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[16:05:14] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[16:05:15] [Client thread/INFO]: Stopping!
+[16:05:15] [Client thread/INFO]: SoundSystem shutting down...
+[16:05:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
